@@ -16,9 +16,18 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.4",
     "react": "^19.0.0",
+    "react-devicons": "^2.16.2",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
