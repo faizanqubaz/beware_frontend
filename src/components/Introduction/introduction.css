@@ -1,0 +1,184 @@
+.introduction_main_slider {
+    max-width: 1309px;
+    margin: auto;
+    padding: 24px 11px;
+  }
+  
+  /* General Styling */
+  .introduction_slider_heading_head {
+    text-align: center;
+  }
+  
+  .introduction_slider_heading {
+    font-family: "Roboto", sans-serif;
+    color: #95723f;
+    font-weight: 600;
+    word-spacing: 4px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .introduction_slider_para_image_slider {
+    padding: 27px 9px;
+  }
+  
+  .introduction_slider_paragraph {
+    font-size: 18px;
+    margin-top: 0;
+      width: 50%;
+    color: #000000;
+    font-family: 'Droid Serif', 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  
+  .introduction_slider_para_image {
+    max-width: 100%; /* Ensures the image doesn’t exceed its container's width */
+    height: auto; /* Maintains the aspect ratio */
+    transition: transform 3s ease-in-out;
+    object-fit: cover; /* Ensures the image fits its container */
+  }
+  
+  .introduction_slider_para_image:hover {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+  }
+  
+  .introduction_slider_para_image_slider_first,
+  .introduction_slider_para_image_slider_second {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .introduction_slider_para_image_slider_second {
+    margin-top: 56px;
+  }
+  
+  /* Intersection Observer Transition */
+  .in-view .introduction_slider_para_image,
+  .in-view .introduction_slider_paragraph {
+    opacity: 1;
+    transform: translateX(0);
+  
+  }
+  
+  .introduction_slider_para_image,
+  .introduction_slider_paragraph {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 3s ease-in-out;
+  }
+  
+  /* RESPONSIVENESS */
+  
+  /* Small devices (max-width: 600px) */
+  @media screen and (max-width: 600px) {
+    .introduction_slider_heading {
+      font-size: 20px;
+    }
+  
+    .introduction_slider_paragraph {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    .introduction_slider_para_image {
+      width: 100%;
+    }
+  
+    .introduction_slider_para_image_slider_first,
+    .introduction_slider_para_image_slider_second {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .introduction_slider_para_image {
+      width: 100%; /* Images occupy full width in smaller screens */
+      height: auto;
+      margin-bottom: 20px; /* Adds space between image and text */  }
+  }
+  
+  /* Tablets (max-width: 768px) */
+  @media screen and (max-width: 768px) {
+    .introduction_slider_heading {
+      font-size: 22px;
+    }
+  
+    .introduction_slider_paragraph {
+      font-size: 16px;
+      width: 90%;
+      line-height: 1.6;
+    }
+  
+    .introduction_slider_para_image {
+      width: 90%;
+      margin-bottom: 20px;
+      height: auto;
+    }
+  
+    .introduction_slider_para_image_slider_first,
+    .introduction_slider_para_image_slider_second {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  /* Laptops (max-width: 1024px) */
+  @media screen and (max-width: 1024px) {
+    .introduction_slider_heading {
+      font-size: 24px;
+    }
+  
+  
+    .introduction_main_slider {
+      max-width: 1309px;
+      margin: auto;
+      padding: 24px 11px;
+    }
+    .introduction_slider_paragraph {
+      font-size: 17px;
+      width: 75%;
+      line-height: 1.7;
+    }
+  
+    .introduction_slider_para_image {
+      width: 65%;
+      margin-bottom: 20px;
+      height: auto;
+    }
+  
+    .introduction_slider_para_image_slider_first
+     {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .introduction_slider_para_image_slider_second{
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  /* Desktops (min-width: 1025px) */
+  @media screen and (min-width: 1025px) {
+    .introduction_slider_heading {
+      font-size: 28px;
+    }
+  
+    
+    .introduction_slider_paragraph {
+      font-size: 18px;
+      width: 51%;
+    }
+  
+    .introduction_slider_para_image {
+      width: 47%;
+      height: auto;
+    }
+  }
+  
