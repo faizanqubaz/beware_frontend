@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import NavbarComponentClass from "./components/Navbar/navbarcontainer";
 import AlertMessage from "./components/AlertMessage/alertmessage";
 import SliderComponent from "./components/Slider/slider";
-import IntroductionComponent from "./components/Intodduction/introduction";
+import IntroductionComponent from "./components/Introduction/introduction";
 import MapContainerComponent from "./components/map/mapcontainer";
 import DiscountComponent from "./components/Discounts_New_Hunt/discount";
 import PopularHuntComponent from "./components/Popular_Hunt/popularhunt";

@@ -2,7 +2,7 @@ import React, { useState,useEffect  } from 'react';
 import './guide.css'; // CSS file
 import image1 from '../assets/team2.jpg'
 import video1 from '../assets/batura.mp4';
-import video2 from '../assets/batura1.mp4';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,7 +25,7 @@ const GuideContainer = () => {
       rating: 1.8,
       reviews: 6,
       description: 'Small personalized hunting and touring company, owned by Marita and Ernest Dyason...',
-      videoSrc: video2,
+      videoSrc: video1,
       contact:'+923554329249',
     },
     {
@@ -45,7 +45,7 @@ const GuideContainer = () => {
       rating: 9.6,
       reviews: 10,
       description: 'Hunt wild African game on over 12,000 acres...',
-      videoSrc: video2,
+      videoSrc: video1,
       contact:'+923554329249',
     },
     {
