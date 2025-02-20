@@ -1,0 +1,216 @@
+.discount_main_container {
+    background-color: #091211;
+}
+
+.discount_main_container_slider {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+  
+    padding-top: 69px;
+    overflow: hidden; /* Hide images outside the visible container */
+}
+
+.discount_main_container_slider_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount_main_container_slider_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount_main_container_slider_heading {
+    font-size: 32px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.discount_main_container_slider_para_head {
+    font-size: 19px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.discount_main__image_container {
+    display: flex;
+    justify-content: space-between; /* Space out the 3 images */
+    height: 400px;
+    transition: transform 0.8s ease; /* Smooth transition */
+    transform: translateX(0); /* Default state for image container */
+}
+
+.discount_main__image_container_one {
+    flex: 0 0 32%; /* Make each image take up 30% of the container */
+    background-color: #000;
+    border: 1px solid black;
+    text-decoration: none;
+}
+.discount_main__image_container_one:hover{
+    text-decoration: none;
+}
+
+.discount_main__image_container_one_image {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 3s ease-in-out;
+}
+.discount_main__image_container_one_image:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.7; /* Slight transparency effect */
+}
+.discount_main__image_container_one_image_paragraph {
+ 
+    font-size: 16px;
+    font-weight: 900;
+    word-spacing: 3px;
+    margin-bottom: 3px;
+    margin-top: 13px;
+    color: white;
+    padding: 2px 27px;
+    font-family: "Roboto", sans-serif;
+}
+
+.discount_main__image_container_one_head {
+       /* letter-spacing: 2px; */
+       font-size: -1px;
+       padding: 1px 26px;
+       /* padding-left: 40px; */
+       font-size: 18px;
+       word-spacing: 4px;
+       font-family: "Roboto", sans-serif;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+.discount_main__image_container_one_image_paragraph_main_para_fsome{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.discount_main__image_container_two_head {
+  
+    /* max-width: 187px; */
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin-left: 22px;
+    overflow: hidden;
+    color: white;
+}
+/* // Google Maps API key - replace with your actual API key
+const apiKey = 'AIzaSyC6xvlbMFrLYt9ExmJvyFnd5pawC_Al4rs'; */
+
+.discount_main__arrow_left, .discount_main__arrow_right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #dbb127;
+    z-index: 2;
+}
+
+.discount_main__arrow_left {
+    left: 0;
+}
+
+.discount_main__arrow_right {
+    right: 0;
+}
+
+.discount_main__arrow_right_hr {
+    border: 0;
+    height: 5px; /* Thickness of the line */
+    background-color: #dbb127; /* Line color */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+    width: 100%; /* Full width */
+    max-width: 80%; /* Optional: You can reduce the width if needed */
+    margin-left: auto;
+    margin-right: auto; /* Center the line */
+}
+
+.discount_main__arrow_right_hr_in_common{
+    margin-top: 20px;
+}
+
+.discount_main__image_container_one_image_paragraph_main_para{
+    display: block;
+    margin: 0 110px 4px 0;
+    font-size: 12px;
+    color: #dbb127;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .discount_main__image_container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .discount_main__image_container_one {
+        flex: 0 0 45%; /* Increase image width for tablets */
+    }
+
+    .discount_main__image_container_one_image {
+        height: 200px; /* Reduce image height */
+    }
+
+    .discount_main_container_slider_heading {
+        font-size: 26px; /* Smaller heading for tablets */
+    }
+
+    .discount_main_container_slider_para_head {
+        font-size: 16px; /* Smaller text */
+    }
+}
+
+/* For mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .discount_main__image_container {
+        flex-direction: column; /* Stack images vertically */
+        height: auto;
+    }
+
+    .discount_main__image_container_one {
+        flex: 0 0 100%; /* Each image takes full width */
+        margin-bottom: 20px; /* Add margin between images */
+    }
+
+    .discount_main__image_container_one_image {
+        height: 150px; /* Reduce image height */
+    }
+
+    .discount_main_container_slider_heading {
+        font-size: 22px; /* Smaller heading for mobile */
+    }
+
+    .discount_main_container_slider_para_head {
+        font-size: 14px;
+    }
+
+    .discount_main__arrow_left,
+    .discount_main__arrow_right {
+        font-size: 24px; /* Smaller arrows for mobile */
+    }
+}
+
+/* For larger screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .discount_main__image_container {
+        height: 365px; /* Increase height for larger screens */
+    }
+
+    .discount_main__image_container_one_image {
+        height: 210px; /* Larger image height */
+    }
+}

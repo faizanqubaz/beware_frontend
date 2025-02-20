@@ -1,0 +1,99 @@
+.contactus-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+ 
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .contactus_form-container {
+    width: 50%;
+  }
+  
+  .contactus_contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contactus_contact-form input, .contactus_contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contactus_contact-form textarea {
+    height: 150px;
+  }
+  
+  .contactus_form_privacy-policy {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .contactus_form_privacy-policy input {
+    margin-right: 10px;
+  }
+  
+  .contactus_form_privacy-policy label a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .contactus_contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .image-container {
+    width: 45%;
+    text-align: center;
+    height: 580px;
+  }
+  
+  .contact-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .logo-image {
+    margin-top: 20px;
+    max-width: 60%;
+    height: auto;
+  }
+  
+
+  .contactus_heading{
+    text-align: center;
+    margin-top: 51px;
+    margin-bottom: 42px;
+
+    color: #7A6040;;
+  }
+
+
+  .contactus_heading_hr{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 16px;
+  }
+
+
+  .breadcrumb_contactus{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 24px;
+  }
+
+  .breadcrumb_contactus a {
+    color: orange;
+    text-decoration: none;
+  }

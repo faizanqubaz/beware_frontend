@@ -1,0 +1,30 @@
+.alert-container {
+    width: 100%;
+    background-color: #840909;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .alert-message {
+    display: inline-block;
+    animation: moveLeft 10s linear infinite;
+    white-space: nowrap;
+  }
+  
+  @keyframes moveLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

@@ -1,0 +1,203 @@
+/* Base Styles */
+.discount_detail_main_container {
+    background: #f4f3f4;
+    padding: 20px;
+}
+
+.discount_detail_container {
+    border: 1px solid #b3b3b3;
+    max-width: 1200px;
+    margin: auto;
+    height: auto; /* Make height auto for responsiveness */
+    padding: 20px;
+    background: white;
+}
+
+.discount_detail_map_container {
+    width: 100%;
+    height: 300px; /* Adjust height for smaller screens */
+}
+
+.discount_detail_main_container_content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    justify-content: space-between;
+    gap: 20px; /* Add gap for better spacing */
+}
+
+.discount_detail_main_container_content_one,
+.discount_detail_main_container_content_two {
+    width: 100%; /* Full width on small screens */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center; /* Center text */
+}
+
+.discount_detail_main_container_heading {
+    font-size: 24px; /* Smaller font size for mobile */
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+}
+
+.discount_detail_main_container_content_two_paragraph {
+    color: #ae8b2b;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.discount_detail_main_container_content_two_head {
+    color: #b94a48;
+    font-weight: 700;
+    font-size: 22px; /* Smaller font size for mobile */
+}
+
+.discount_detail_main_container_content_two_para_two {
+    margin-left: 0; /* Remove margin for mobile */
+    margin-top: 10px;
+}
+
+.vertical-line {
+    display: none; /* Hide vertical line on small screens */
+}
+
+/* Image Container */
+.discount_detail_image_main_container {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #b3b3b3;
+    background: white;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.discount_detail_image_main_container_one,
+.discount_detail_image_main_container_two {
+    width: 100%; /* Full width on small screens */
+}
+
+.discount_detail_image_main_container_one_iamge {
+    width: 100%;
+    height: auto; /* Ensure image scales */
+}
+
+.discount_detail_image_main_container_one_iamge_round {
+    width: 80px; /* Smaller size for mobile */
+    height: 80px;
+    border-radius: 50%;
+}
+
+.discount_detail_image_main_container_one_iamge_round_flex {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Dolar Section */
+.discount_detail_dolar_main_container {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #b3b3b3;
+    background: white;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.discount_detail_dolar_main_container_one,
+.discount_detail_dolar_main_container_two {
+    width: 100%; /* Full width on small screens */
+}
+
+.discount_detail_dolar_main_container_one_heading {
+    font-size: 28px; /* Smaller font size for mobile */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.discount_detail_dolar_main_container_two_dolar_head_heading {
+    font-size: 36px; /* Smaller font size for mobile */
+}
+
+.discount_detail_dolar_main_container_two_dolar_head_para {
+    font-size: 20px; /* Smaller font size for mobile */
+}
+
+.discount_detail_dolar_main_container_two_dolar_button_head {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+}
+
+/* Scrollable Content */
+.discount_detail_scrollable_content {
+    max-height: 200px; /* Adjust height for smaller screens */
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .discount_detail_main_container_content {
+        flex-direction: row; /* Horizontal layout for tablets and larger */
+    }
+
+    .discount_detail_main_container_content_one,
+    .discount_detail_main_container_content_two {
+        width: 48%; /* Adjust width for larger screens */
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    .discount_detail_image_main_container,
+    .discount_detail_dolar_main_container {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    .discount_detail_image_main_container_one {
+        width: 65%;
+    }
+
+    .discount_detail_image_main_container_two {
+        width: 30%;
+    }
+
+    .discount_detail_dolar_main_container_one {
+        width: 65%;
+    }
+
+    .discount_detail_dolar_main_container_two {
+        width: 30%;
+    }
+
+    .vertical-line {
+        display: block; /* Show vertical line on larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .discount_detail_main_container_heading {
+        font-size: 30px; /* Larger font size for desktops */
+    }
+
+    .discount_detail_main_container_content_two_head {
+        font-size: 27px; /* Larger font size for desktops */
+    }
+
+    .discount_detail_dolar_main_container_one_heading {
+        font-size: 36px; /* Larger font size for desktops */
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_head_heading {
+        font-size: 44px; /* Larger font size for desktops */
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_head_para {
+        font-size: 26px; /* Larger font size for desktops */
+    }
+}
