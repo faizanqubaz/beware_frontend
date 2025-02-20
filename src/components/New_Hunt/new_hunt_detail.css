@@ -1,0 +1,299 @@
+.discount_detail_main_container {
+    background: #f4f3f4;
+    padding: 10px;
+}
+
+.discount_detail_container {
+    border: 1px solid #b3b3b3;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    background: white;
+}
+
+.discount_detail_main_container_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.discount_detail_main_container_content_one {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.discount_detail_main_container_heading {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+}
+
+.discount_detail_main_container_content_two {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.discount_detail_main_container_content_two_paragraph {
+    color: #ae8b2b;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.discount_detail_main_container_content_two_head {
+    color: #b94a48;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.discount_detail_main_container_content_two_para_two {
+    margin: 0;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+.vertical-line {
+    display: none; /* Hide on mobile */
+}
+
+.discount_detail_image_main_container {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #b3b3b3;
+    background: white;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discount_detail_image_main_container_one {
+    width: 100%;
+}
+
+.discount_detail_image_main_container_two {
+    width: 100%;
+    padding: 10px;
+}
+
+.discount_detail_image_main_container_one_iamge {
+    width: 100%;
+}
+
+.discount_detail_image_main_container_one_iamge_round {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.discount_detail_image_main_container_one_iamge_round_flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount_detail_image_main_container_one_iamge_round_para_one {
+    margin: 0;
+    font-weight: 700;
+}
+
+.discount_detail_image_main_container_one_iamge_round_para_two {
+    margin: 0;
+    font-weight: 200;
+}
+
+.discount_detail_image_main_container_one_iamge_round_para_three {
+    margin: 0;
+}
+
+.discount_detail_dolar_main_container {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #b3b3b3;
+    background: white;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discount_detail_dolar_main_container_one {
+    width: 100%;
+    padding: 10px;
+}
+
+.discount_detail_dolar_main_container_one_heading {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.discount_detail_dolar_main_container_one_para {
+    font-family: "monsarat", sans-serif;
+    font-weight: 400;
+}
+
+.discount_detail_dolar_main_container_two {
+    width: 100%;
+    padding: 10px;
+}
+
+.discount_detail_dolar_main_container_two_dolar_head_heading {
+    color: #b03b3b;
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+}
+
+.discount_detail_dolar_main_container_two_dolar_head_para {
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+
+.discount_detail_dolar_main_container_two_dolar_button_head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discount_detail_dolar_main_container_two_dolar_instant_button,
+.discount_detail_dolar_main_container_two_dolar_whatsapp_button {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.discount_detail_dolar_main_container_two_dolar_instant_button {
+    color: #b03b3b;
+    border: 1px solid #b03b3b;
+}
+
+.discount_detail_dolar_main_container_two_dolar_whatsapp_button {
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.discount_detail_dolar_main_container_two_dolar_button_head_content {
+    margin-top: 20px;
+}
+
+.discount_detail_scrollable_content {
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.discount_detail_scrollable_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.discount_detail_scrollable_content::-webkit-scrollbar-thumb {
+    background-color: #dbb127;
+    border-radius: 10px;
+}
+
+.previous-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.discount_detail_dolar_main_container_map {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.discount_detail_dolar_main_container_map_head {
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Tablets and Larger Screens */
+@media (min-width: 768px) {
+    .discount_detail_main_container_content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .vertical-line {
+        display: block;
+        border-left: 1px solid #ccc;
+        height: 90px;
+        margin: 0 20px;
+    }
+
+    .discount_detail_image_main_container {
+        flex-direction: row;
+    }
+
+    .discount_detail_image_main_container_one {
+        width: 65%;
+    }
+
+    .discount_detail_image_main_container_two {
+        width: 30%;
+    }
+
+    .discount_detail_dolar_main_container {
+        flex-direction: row;
+    }
+
+    .discount_detail_dolar_main_container_one {
+        width: 65%;
+    }
+
+    .discount_detail_dolar_main_container_two {
+        width: 30%;
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_button_head {
+        flex-direction: row;
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_instant_button,
+    .discount_detail_dolar_main_container_two_dolar_whatsapp_button {
+        width: auto;
+    }
+}
+
+/* Media Queries for Desktops and Larger Screens */
+@media (min-width: 1024px) {
+    .discount_detail_main_container {
+        padding: 20px;
+    }
+
+    .discount_detail_container {
+        padding: 20px;
+    }
+
+    .discount_detail_main_container_heading {
+        font-size: 30px;
+    }
+
+    .discount_detail_main_container_content_two_head {
+        font-size: 27px;
+    }
+
+    .discount_detail_dolar_main_container_one_heading {
+        font-size: 36px;
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_head_heading {
+        font-size: 44px;
+    }
+
+    .discount_detail_dolar_main_container_two_dolar_head_para {
+        font-size: 26px;
+    }
+
+    .discount_detail_dolar_main_container_map_head {
+        font-size: 29px;
+    }
+}
