@@ -1,6 +1,6 @@
 import React, { useState,useEffect  } from 'react';
 import './guide.css'; // CSS file
-import image1 from '../assets/team2.jpg'
+import image1 from '../assets/passu1.jpg'
 import video1 from '../assets/batura.mp4';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -10,10 +10,10 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import team1 from '../../components/assets/team2.jpg';
-import team2 from '../../components/assets/team3.jpg';
-import logo3 from '../../components/assets/logo3.png';
-import logo4 from '../../components/assets/logo6.png'; 
+import team1 from '../../components/assets/batura2.jpg';
+import team2 from '../../components/assets/batura2.jpg';
+import logo3 from '../../components/assets/batura2.jpg';
+import logo4 from '../../components/assets/batura2.jpg'; 
 
 
 

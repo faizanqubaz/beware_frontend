@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutus.css'; // CSS file for styling
-import aboutImage from '../assets/passu2.jpg'; // Ensure you import the image correctly
+import aboutImage from '../assets/passu1.jpg'; // Ensure you import the image correctly
 import FooterComponent from '../Footer/footer';
 
 const AboutUs = () => {

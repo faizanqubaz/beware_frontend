@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './sponsors.css';
 import passuimage from '../assets/card1.jpg';
-import baturaImage from '../assets/passu2.jpg';
+import baturaImage from '../assets/passu1.jpg';
 import FooterComponent from '../Footer/footer';
 
 const SponsorsComponent = () => {

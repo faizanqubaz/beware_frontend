@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './video.css';
-import video1 from '../assets/batura1.mp4';
+import video1 from '../assets/batura.mp4';
 import video2 from '../assets/batura.mp4';
-import video3 from '../assets/passu.mp4';
+import video3 from '../assets/batura2.jpg';
 import FooterComponent from '../Footer/footer';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';

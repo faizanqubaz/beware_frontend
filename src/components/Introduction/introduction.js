@@ -1,7 +1,7 @@
 import './introduction.css';
 import React, { useEffect, useRef } from 'react';
-import imageA3 from '../assets/hunter5.jpeg';
-import image9 from '../assets/hunter2.jpeg'
+import imageA3 from '../assets/passu1.jpg';
+import image9 from '../assets/batura3.jpg'
 
 const IntroductionSlider = () => {
   const introSectionRef = useRef(null);

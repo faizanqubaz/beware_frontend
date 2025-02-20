@@ -1,10 +1,10 @@
 
 import './team.css';
-import samjon from '../../components/assets/samjon.jpeg';
+import samjon from '../../components/assets/samjon.jpg';
 import tariq from '../../components/assets/tariq.jpeg';
 import faizan from '../../components/assets/faizan.jpeg';
 import mudassir from '../../components/assets/mudasir.jpeg';
-import alvi from '../../components/assets/alvi.jpg'; 
+import alvi from '../../components/assets/samjon.jpg'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 

@@ -4,16 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import passuA from '../assets/passu2.jpg';
+import passuA from '../assets/passu1.jpg';
 // Import additional images
-import passuA1 from '../assets/passu1.jpg';
-import passuA2 from '../assets/passu2.jpg';
-import passuA3 from '../assets/passu3.jpg';
-import passuA4 from '../assets/passu4.jpg';
-import passuA5 from '../assets/yunz1.jpg';
-import passuA6 from '../assets/yunz2.jpg';
-import passuA7 from '../assets/yunz3.jpg';
-import passuA8 from '../assets/yunz4.jpg';
+import passuA1 from '../assets/batura3.jpg';
+import passuA2 from '../assets/batura2.jpg';
+import passuA3 from '../assets/batura3.jpg';
+import passuA4 from '../assets/batura3.jpg';
+import passuA5 from '../assets/batura2.jpg';
+import passuA6 from '../assets/batura2.jpg';
+import passuA7 from '../assets/passu1.jpg';
+import passuA8 from '../assets/batura3.jpg';
 
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
 

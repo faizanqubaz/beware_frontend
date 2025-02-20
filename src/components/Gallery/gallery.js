@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './gallery.css';
-import image1 from '../assets/passu4.jpg';
-import image2 from '../assets/passu3.jpg';
-import image3 from '../assets/passu3.jpg';
-import image4 from '../assets/passu2.jpg';
-import image5 from '../assets/team3.jpg';
+import image1 from '../assets/passu1.jpg';
+import image2 from '../assets/passu1.jpg';
+import image3 from '../assets/passu1.jpg';
+import image4 from '../assets/passu1.jpg';
+import image5 from '../assets/passu1.jpg';
 import FooterComponent from '../Footer/footer';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
