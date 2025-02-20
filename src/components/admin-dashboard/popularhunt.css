@@ -1,0 +1,135 @@
+/* Base Styles */
+.admin_portor_container {
+    position: relative;
+    border-radius: 7px;
+    border: 1px solid #cecece;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .admin_portor_content.blur {
+    filter: blur(2px);
+  }
+  
+  .admin_portor_head {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .admin_portor_heading {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  
+  .admin_portor_flex_1 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 20px; /* Add spacing between items */
+    margin-top: 20px;
+  }
+  
+  .admin_portor_flex_1_conatiner {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    width: 100%; /* Full width on mobile */
+    gap: 10px; /* Add spacing between label and input */
+  }
+  
+  .admin_portor_flex_1_label {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .admin_portor_flex_1_input,
+  .admin_portor_flex_1_conatiner_date_input,
+  .dropdown-input {
+    width: 100%; /* Full width on mobile */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .admin_portor_flex_1_input:focus,
+  .admin_portor_flex_1_conatiner_date_input:focus,
+  .dropdown-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .admin_portor_flex_1_conatiner_btn {
+    display: flex;
+    justify-content: center; /* Center button on mobile */
+    margin-top: 20px;
+  }
+  
+  .admin_portor_flex_1_conatiner_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .admin_portor_flex_1_conatiner_button:hover {
+    background-color: #0056b3;
+  }
+  
+  .admin_portor_flex_1_conatiner_button:focus {
+    outline: none;
+  }
+  
+  /* Media Queries for Tablets and Larger Screens */
+  @media (min-width: 768px) {
+    .admin_portor_flex_1 {
+        flex-direction: row; /* Horizontal layout for tablets and larger */
+        flex-wrap: wrap; /* Allow wrapping for better spacing */
+    }
+  
+    .admin_portor_flex_1_conatiner {
+        width: 48%; /* Two columns on tablets and larger */
+    }
+  
+    .admin_portor_flex_1_conatiner_btn {
+        justify-content: flex-end; /* Align button to the right */
+    }
+  }
+  
+  /* Media Queries for Laptops and Desktops */
+  @media (min-width: 1024px) {
+    .admin_portor_flex_1_conatiner {
+        width: 23%; /* Four columns on laptops and desktops */
+    }
+  
+    .admin_portor_flex_1_conatiner_btn {
+        margin-left: auto; /* Align button to the right */
+    }
+  }
+  
+  
+  
+  
+  

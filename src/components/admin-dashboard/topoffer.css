@@ -1,0 +1,109 @@
+.admin_portor_container {
+    border-radius: 7px;
+    border: 1px solid #cecece;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .admin_portor_head {
+    padding: 10px 0;
+  }
+  
+  .admin_portor_heading {
+    font-family: 'Roboto Condensed';
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .admin_portor_flex_1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .admin_portor_flex_1_conatiner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .admin_portor_flex_1_label {
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  
+  .admin_portor_flex_1_input,
+  .admin_portor_flex_1_conatiner_date_input,
+  .dropdown-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .admin_portor_flex_1_input:focus,
+  .admin_portor_flex_1_conatiner_date_input:focus,
+  .dropdown-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .admin_portor_flex_1_input::placeholder {
+    color: #999;
+  }
+  
+  .admin_portor_flex_1_conatiner_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .admin_portor_flex_1_conatiner_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .admin_portor_flex_1_conatiner_button:hover {
+    background-color: #0056b3;
+  }
+  
+  .admin_portor_flex_1_conatiner_button:focus {
+    outline: none;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (min-width: 768px) {
+    .admin_portor_flex_1_conatiner {
+        width: 48%; /* Two columns on tablets and larger screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .admin_portor_flex_1_conatiner {
+        width: 23%; /* Four columns on laptops and larger screens */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .admin_portor_flex_1_conatiner {
+        width: 100%; /* Single column on mobile screens */
+    }
+  
+    .admin_portor_flex_1_conatiner_btn {
+        justify-content: center; /* Center the button on mobile screens */
+    }
+  }
