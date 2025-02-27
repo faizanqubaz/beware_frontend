@@ -4,7 +4,7 @@ import samjon from '../../components/assets/samjon.jpg';
 import tariq from '../../components/assets/tariq.jpeg';
 import faizan from '../../components/assets/faizan.jpeg';
 import mudassir from '../../components/assets/mudasir.jpeg';
-import alvi from '../../components/assets/samjon.jpg'; 
+import alvi from '../../components/assets/alvi.JPG'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const partners = [
   { name: "Tariq Ali", title: "President", img: tariq },
-  { name: "Faizan Adil", title: "Finicial Secetatory", img: faizan },
+  { name: "Faizan Adil", title: "PRO Secetatory", img: faizan },
   { name: "Muhammad Alvi", title: "Gen. Secetatory", img: alvi },
   { name: "Samar Jan", title: "RRO to President", img: samjon },
   { name: "Mudasir Aziz", title: "Media", img: mudassir }

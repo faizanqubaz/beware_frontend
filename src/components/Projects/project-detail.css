@@ -1,0 +1,145 @@
+.project-detail-container {
+    font-family: Arial, sans-serif;
+    max-width: 1437px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image Section */
+  .image-section img {
+    width: 100%;
+    height: 439px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Header Section */
+  .header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .header p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .header button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .header button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Meta Info Section */
+  .meta-info {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Overview Section */
+  .overview h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  .overview p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .overview a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .overview a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Details Section */
+  .details h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .details ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .details ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Owner Info Section */
+  .owner-info h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .owner-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .owner-actions button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .owner-actions button:hover {
+    background-color: #218838;
+  }
+  
+  /* Special Offer Section */
+  .special-offer h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  .trending-properties {
+    margin-top: 20px;
+  }
+  
+  .trending-properties h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .trending-properties p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }

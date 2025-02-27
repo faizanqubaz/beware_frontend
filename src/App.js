@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import ProtectedRoute from "./components/Admin/ProtectedRoute"; // Import the ProtectedRoute component
+import ProjectDetail from './components/Projects/project-detail'
 import NavbarComponent from "./components/Navbar/navbar";
 import { Helmet } from "react-helmet";
 import NavbarComponentClass from "./components/Navbar/navbarcontainer";
@@ -20,7 +21,7 @@ import NewHuntDetailContainer from "./components/New_Hunt/new_hunt_detail";
 import ContactUSContainer from "./components/contactus/contactus";
 import TermsAndConditionComponent from "./components/terms_and_condition/terms_and_condition";
 import AboutUsContainer from "./components/AboutUS/aboutus";
-import SponsorsContainer from "./components/Sponsors/sponsors";
+import ProjectsContainer from "./components/Projects/projects";
 import GalleryComponent from "./components/Gallery/gallery";
 import VideoComponent from "./components/Video/video";
 import AdminComponentForm from "./components/Admin/admin";
@@ -63,10 +64,11 @@ function MainContent() {
         <Route path="/contactus" element={<ContactUSContainer />} />
         <Route path="/terms_and_conditions" element={<TermsAndConditionComponent />} />
         <Route path="/aboutus" element={<AboutUsContainer />} />
-        <Route path="/sponsors" element={<SponsorsContainer />} />
+        <Route path="/projects" element={<ProjectsContainer />} />
         <Route path="/gallery" element={<GalleryComponent />} />
         <Route path="/video" element={<VideoComponent />} />
         <Route path="/admin-sigin" element={<AdminComponentForm />} />
+        <Route path="/projectdetail/:id" element={<ProjectDetail />} />
 
         {/* Protect the Dashboard Route */}
         <Route

@@ -187,8 +187,8 @@ const NavbarContainer = () => {
                   </div>
                 )}
               </li>
-              <Link to={'/sponsors'} className='navbar_container_contactus_style'>
-                <li>Sponsors</li>
+              <Link to={'/projects'} className='navbar_container_contactus_style'>
+                <li>Projects</li>
               </Link>
 
               <Link to={'/terms_and_conditions'} className='navbar_container_contactus_style'>

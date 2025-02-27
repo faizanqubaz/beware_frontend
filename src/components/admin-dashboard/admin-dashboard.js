@@ -23,6 +23,8 @@ import TopOffer from "./topoffer";
 import AdminEdits from "./admindisplay";
 import AdminMessage from "../admin-dashboard/message-admin";
 import AdminMessageEdit from "../admin-dashboard/admineditmessage";
+import ADDAdminProject from '../admin-dashboard/adding-project'
+import ADMINEditProject from '../admin-dashboard/admin-project-edit'
 
 const drawerWidth = 240;
 const mobileDrawerWidth = 150;
@@ -122,6 +124,8 @@ const Dashboard = () => {
             "Admin Edits",
             "Admin Message",
             "Message Edit",
+            "Add Project",
+            "Edit Project"
           ].map((text) => (
             <ListItem button key={text} onClick={() => handleMenuClick(text)}>
               <ListItemText primary={text} />
@@ -148,6 +152,8 @@ const Dashboard = () => {
           {activeComponent === "Admin Edits" && <AdminEdits />}
           {activeComponent === "Admin Message" && <AdminMessage />}
           {activeComponent === "Message Edit" && <AdminMessageEdit />}
+          {activeComponent === "Add Project" && <ADDAdminProject />}
+          {activeComponent === "Edit Project" && <ADMINEditProject />}
           {activeComponent === null && (
             <Typography paragraph>
               Welcome to the dashboard! Here you can display your main content like charts, tables, or analytics.

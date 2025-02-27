@@ -21,7 +21,7 @@ const LoginComponent = () => {
     setSuccessMessage('');
 
     try {
-      const response = await axios.post('https://beware-seven.vercel.app/api/v2/login', {
+      const response = await axios.post('http://localhost:5000/api/v2/login', {
         email,
         password,
       });

@@ -1,0 +1,198 @@
+.breadcrumb_sponsors {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .sponsors-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .sponsors-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sponsors-slider-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sponsors-slider-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sponsors-slider-heading {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .sponsors-slider-para-head {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .sponsors-arrow-left,
+  .sponsors-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .sponsors-arrow-left {
+    left: -40px;
+  }
+  
+  .sponsors-arrow-right {
+    right: -40px;
+  }
+  
+  .sponsors-image-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .sponsors-card {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .sponsors-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .sponsors-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .sponsors-card-description {
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .sponsors-card-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  .sponsors-card-head p {
+    margin: 0 5px;
+    font-size: 14px;
+    color: #dbb127;
+  }
+  
+  .sponsors-card-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .sponsors-card-price p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .sponsors-arrow-right-hr {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .sponsors-image-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sponsors-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .sponsors-arrow-left,
+    .sponsors-arrow-right {
+      display: none;
+    }
+  
+    .sponsors-arrow-right-hr {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+  
+  .sponsors-card-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .sponsors-dropdown {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+  }
+  
+  .sponsors-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .sponsors-dropdown button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .sponsors-card input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .sponsors-card button {
+    background-color: #dbb127;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .sponsors-card button:hover {
+    background-color: #c99f1f;
+  }
