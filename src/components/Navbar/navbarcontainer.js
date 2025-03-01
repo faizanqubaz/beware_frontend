@@ -199,6 +199,10 @@ const NavbarContainer = () => {
                 <li>Contact Us</li>
               </Link>
 
+              <Link className='navbar_container_contactus_style' to={'/huntchart'}>
+                <li>Charts & Graphs</li>
+              </Link>
+
               <Link className='navbar_container_contactus_style' to={'/admin-sigin'}>
                 <li>Admin</li>
               </Link>

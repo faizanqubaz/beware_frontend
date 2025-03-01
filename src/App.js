@@ -26,6 +26,7 @@ import GalleryComponent from "./components/Gallery/gallery";
 import VideoComponent from "./components/Video/video";
 import AdminComponentForm from "./components/Admin/admin";
 import AdminDashboardComponent from "./components/admin-dashboard/admin-dashboard";
+import HuntChartComponent from './components/HuntChart/huntchart'
 
 function MainContent() {
   const location = useLocation();
@@ -69,6 +70,7 @@ function MainContent() {
         <Route path="/video" element={<VideoComponent />} />
         <Route path="/admin-sigin" element={<AdminComponentForm />} />
         <Route path="/projectdetail/:id" element={<ProjectDetail />} />
+        <Route path="/huntchart" element={<HuntChartComponent />} />
 
         {/* Protect the Dashboard Route */}
         <Route
