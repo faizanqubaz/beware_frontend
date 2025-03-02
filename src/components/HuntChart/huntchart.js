@@ -23,7 +23,7 @@ const ChartHunt = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/v2/ibex/stats');
+        const response = await fetch('https://beware-seven.vercel.app/api/v2/ibex/stats');
         const data = await response.json();
         console.log('data', data);
 
