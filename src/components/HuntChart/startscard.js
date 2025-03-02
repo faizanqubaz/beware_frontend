@@ -9,6 +9,18 @@ const StatsCard = ({
   revenuePercentageChange,
   cancellationPercentageChange,
 }) => {
+  // Helper function to determine if the change is positive or negative
+  const getChangeText = (percentageChange) => {
+    const change = parseFloat(percentageChange);
+    if (change > 0) {
+      return `increased by ${Math.abs(change).toFixed(2)}%`;
+    } else if (change < 0) {
+      return `decreased by ${Math.abs(change).toFixed(2)}%`;
+    } else {
+      return 'no change';
+    }
+  };
+
   return (
     <div className="stats-cards-container">
       {/* Card 1: Total Hunt This Session */}
@@ -18,7 +30,9 @@ const StatsCard = ({
         </div>
         <div className="card-content">
           <span className="card-value">{totalHunt}</span>
-          <span className="card-change">{huntPercentageChange}%</span>
+          <span className="card-change">
+            {getChangeText(huntPercentageChange)} from previous session
+          </span>
         </div>
       </div>
 
@@ -29,7 +43,9 @@ const StatsCard = ({
         </div>
         <div className="card-content">
           <span className="card-value">${totalRevenue}</span>
-          <span className="card-change">{revenuePercentageChange}%</span>
+          <span className="card-change">
+            {getChangeText(revenuePercentageChange)} from previous session
+          </span>
         </div>
       </div>
 
@@ -40,7 +56,9 @@ const StatsCard = ({
         </div>
         <div className="card-content">
           <span className="card-value">{totalCancellation}</span>
-          <span className="card-change">{cancellationPercentageChange}%</span>
+          <span className="card-change">
+            {getChangeText(cancellationPercentageChange)} from previous session
+          </span>
         </div>
       </div>
     </div>

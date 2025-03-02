@@ -63,7 +63,7 @@ const ChartHunt = () => {
           revenuePercentageChange={stats.revenuePercentageChange}
           cancellationPercentageChange={stats.cancellationPercentageChange}
         />
-        <h2 className="huntchart_title">Hunts per Year</h2>
+        <h2 className="huntchart_title">Hunts per Session (Nov-Apr)</h2>
         <div className="huntchart_content">
           {huntData.length > 0 ? (
             <div className="huntchart_charts-wrapper">
