@@ -16,27 +16,32 @@ const ChartHunt = () => {
     huntPercentageChange: 0,
     revenuePercentageChange: 0,
     cancellationPercentageChange: 0,
+    yearlyData: []
   });
 
   // Fetch data on page load
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Replace with your API endpoint
         const response = await fetch('http://localhost:5000/api/v2/ibex/stats');
         const data = await response.json();
+        console.log('data', data);
 
-        // Set hunt data for charts
-        setHuntData(data.huntData);
+        if (data.huntData) {
+          setHuntData(data.huntData.map((item) => ({
+            ...item,
+            hunts: isNaN(Number(item.hunts)) ? 0 : Number(item.hunts)
+          })));
+        }
 
-        // Set stats for cards
         setStats({
-          totalHunt: data.totalHunt,
-          totalRevenue: data.totalRevenue,
-          totalCancellation: data.totalCancellation,
-          huntPercentageChange: data.huntPercentageChange,
-          revenuePercentageChange: data.revenuePercentageChange,
-          cancellationPercentageChange: data.cancellationPercentageChange,
+          totalHunt: isNaN(Number(data.totalHunt)) ? 0 : Number(data.totalHunt),
+          totalRevenue: isNaN(Number(data.totalRevenue)) ? 0 : Number(data.totalRevenue),
+          totalCancellation: isNaN(Number(data.totalCancellation)) ? 0 : Number(data.totalCancellation),
+          huntPercentageChange: isNaN(Number(data.huntPercentageChange)) ? 0 : Number(data.huntPercentageChange),
+          revenuePercentageChange: isNaN(Number(data.revenuePercentageChange)) ? 0 : Number(data.revenuePercentageChange),
+          cancellationPercentageChange: isNaN(Number(data.cancellationPercentageChange)) ? 0 : Number(data.cancellationPercentageChange),
+          yearlyData: data.yearlyData || []
         });
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -58,41 +63,47 @@ const ChartHunt = () => {
           revenuePercentageChange={stats.revenuePercentageChange}
           cancellationPercentageChange={stats.cancellationPercentageChange}
         />
-        <h2 className="huntchart_title">Hunts per Session (Nov-Apr)</h2>
+        <h2 className="huntchart_title">Hunts per Year</h2>
         <div className="huntchart_content">
-          <div className="huntchart_pie-container">
-            <PieChart width={400} height={300}>
-              <Pie
-                data={huntData}
-                dataKey="hunts"
-                nameKey="session"
-                cx="50%"
-                cy="50%"
-                outerRadius={100}
-                fill="#8884d8"
-                label
-              >
-                {huntData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend />
-            </PieChart>
-          </div>
-          <div className="huntchart_chart-container">
-            <BarChart width={800} height={300} data={huntData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="session" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="hunts" fill="#8884d8" />
-            </BarChart>
-          </div>
+          {huntData.length > 0 ? (
+            <div className="huntchart_charts-wrapper">
+              <div className="huntchart_pie-container">
+                <PieChart width={400} height={300}>
+                  <Pie
+                    data={huntData}
+                    dataKey="hunts"
+                    nameKey="session"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={100}
+                    fill="#8884d8"
+                    label
+                  >
+                    {huntData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                  <Legend />
+                </PieChart>
+              </div>
+              <div className="huntchart_chart-container">
+                <BarChart width={800} height={300} data={huntData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="session" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="hunts" fill="#8884d8" />
+                </BarChart>
+              </div>
+            </div>
+          ) : (
+            <p>No data available</p>
+          )}
         </div>
       </div>
-      <RevenueChart />
+      <RevenueChart huntData={huntData} />
       <FooterComponent />
     </>
   );

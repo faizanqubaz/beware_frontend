@@ -1,52 +1,61 @@
-/* General Styles */
 .huntchart_container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.huntchart_title {
+  margin-bottom: 20px; /* Reduced margin for better spacing */
+  font-size: 28px;
+  text-align: center;
+}
+
+.huntchart_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.huntchart_chart-container,
+.huntchart_bar-container {
+  flex: 1; /* Allow both containers to grow and take equal space */
+  min-width: 300px; /* Minimum width for each chart */
+  max-width: calc(50% - 10px); /* Ensure they don't exceed half the container width minus gap */
+}
+
+.huntchart_chart-container {
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .huntchart_title {
+    font-size: 20px;
+  }
+
+  .huntchart_content {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .huntchart_title {
-    margin-bottom: 82px;
-    font-size: 28px;
-  }
-  
-  .huntchart_content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .huntchart_pie-container,
-  .huntchart_chart-container {
-
-    min-width: 300px;
-    max-width: 100%;
-  }
-  
-  .huntchart_chart-container {
-    overflow-x: auto;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .huntchart_title {
-      font-size: 20px;
-    }
-  
-    .huntchart_content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .huntchart_pie-container,
-    .huntchart_chart-container {
-      width: 100%;
-    }
   }
 
+  .huntchart_chart-container,
+  .huntchart_bar-container {
+    max-width: 100%; /* Full width on mobile */
+    width: 100%; /* Ensure full width */
+  }
 
-  
+  .huntchart_chart-container .recharts-wrapper,
+  .huntchart_bar-container .recharts-wrapper {
+    width: 100% !important; /* Force charts to take full width */
+    height: auto !important; /* Allow height to adjust */
+  }
+
+  .huntchart_chart-container .recharts-surface,
+  .huntchart_bar-container .recharts-surface {
+    width: 100% !important; /* Ensure chart surface takes full width */
+  }
+}
