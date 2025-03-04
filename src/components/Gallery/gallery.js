@@ -8,6 +8,8 @@ import image5 from '../assets/passu1.jpg';
 import FooterComponent from '../Footer/footer';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Gallery = () => {
   const alpineIbexImages = [
@@ -71,6 +73,23 @@ const Gallery = () => {
             onCloseRequest={() => setIsOpen(false)}
             onMovePrevRequest={() => setPhotoIndex((photoIndex + allImages.length - 1) % allImages.length)}
             onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % allImages.length)}
+            enableZoom={false}
+            toolbarButtons={[
+              <button
+                key="prev"
+                className="lightbox-nav-button"
+                onClick={() => setPhotoIndex((photoIndex + allImages.length - 1) % allImages.length)}
+              >
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>,
+              <button
+                key="next"
+                className="lightbox-nav-button"
+                onClick={() => setPhotoIndex((photoIndex + 1) % allImages.length)}
+              >
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            ]}
           />
         )}
       </div>

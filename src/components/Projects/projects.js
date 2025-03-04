@@ -19,7 +19,7 @@ const ProjectsComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v2/project/getall`);
+        const response = await axios.get(`https://beware-seven.vercel.app/api/v2/project/getall`);
         setSponsors(response.data.projects);
       } catch (error) {
         console.error('Error fetching sponsor data:', error);
