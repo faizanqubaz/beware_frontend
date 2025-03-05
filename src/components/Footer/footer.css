@@ -123,43 +123,61 @@
     margin: 0;
 }
 
-/* Media Queries */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .footer-column {
-        flex-direction: column;
-        flex: 1 1;
-        min-width: 150px;
-        margin-bottom: 20px;
-        display: flex
-    ;
-        align-items: center;
-        /* align-content: center; */
-        /* justify-content: center; */
-    
-    }
     .footer-top {
         flex-direction: column;
-        flex-direction: column;
-        align-items: center; /* Centers child elements horizontally */
-        justify-content: center; /* Centers child elements vertically */
-        text-align: center; /* Ensures text is centered */
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .footer-logo-section {
+        margin-bottom: 10px; /* Reduced margin for smaller screens */
     }
 
     .footer-links-section {
         flex-direction: column;
-        width: 100%; /* Stretches across the screen */
+        width: 100%;
+        align-items: center; /* Centers columns on smaller screens */
+    }
+
+    .footer-column {
+        min-width: 100%; /* Ensures columns take full width on smaller screens */
+        margin-bottom: 15px; /* Reduced margin for smaller screens */
+        text-align: center; /* Centers text within columns */
+    }
+
+    .footer-column h4 {
+        margin-bottom: 5px; /* Reduced margin for smaller screens */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 5px; /* Reduced margin for smaller screens */
     }
 
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        padding-top: 10px; /* Reduced padding for smaller screens */
     }
 
     .footer-social-icons {
         order: 1;
+        margin-bottom: 10px; /* Reduced margin for smaller screens */
     }
+
     .footer-partner {
         order: 3;
         text-align: center;
+        margin-top: 10px; /* Added margin for better spacing */
+    }
+
+    .footer-selectors {
+        margin-top: 10px; /* Reduced margin for smaller screens */
+    }
+
+    .footer-select {
+        margin-right: 5px; /* Reduced margin for smaller screens */
     }
 }

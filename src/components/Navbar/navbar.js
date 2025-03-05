@@ -38,7 +38,7 @@ const Navbar = () => {
           </p>
         </div>
         <div className='navbar_slider_dividor_icons_slider'>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="icon">
+          <a href="https://www.facebook.com/share/18YAZfqmj4/" target="_blank" rel="noopener noreferrer" className="icon">
             <FontAwesomeIcon className='navbar_slider_dividor_icons_slider_icon' icon={faFacebook} size="1x" style={{ color: 'white', fontSize: '18px' }} />
           </a>
           <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="icon">

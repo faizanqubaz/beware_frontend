@@ -1,39 +1,11 @@
 import './introduction.css';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import imageA3 from '../assets/passu1.jpg';
-import image9 from '../assets/batura3.jpg'
+import image9 from '../assets/batura3.jpg';
 
 const IntroductionSlider = () => {
-  const introSectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Add the class after a 4-second delay
-            setTimeout(() => {
-              entry.target.classList.add('in-view');
-            }, 1000); // 4000 milliseconds = 4 seconds
-          }
-        });
-      },
-      { threshold: 0.2 } // Trigger when 20% of the element is in view
-    );
-
-    if (introSectionRef.current) {
-      observer.observe(introSectionRef.current);
-    }
-
-    return () => {
-      if (introSectionRef.current) {
-        observer.unobserve(introSectionRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div ref={introSectionRef} className="introduction_main_slider">
+    <div className="introduction_main_slider">
       <div className="introduction_slider_heading_head">
         <h1 className="introduction_slider_heading">IBEX HUNTING IN Passu AND Batura</h1>
       </div>
