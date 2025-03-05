@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg
 const Navbar = () => {
   const phoneNumber = '3554329249'; // your phone number
   const countryCode = '92'; // country code
-  const email = 'faizanquba@gmail.com'; // recipient email address
+  const email = 'passuconservancy@gmail.com'; // recipient email address
 
   const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/${countryCode}${phoneNumber}`;
@@ -34,7 +34,7 @@ const Navbar = () => {
             onClick={handleEmailClick} 
             style={{ cursor: 'pointer' }}
           >
-            faizanquba@gmail.com
+            passuconservancy@gmail.com
           </p>
         </div>
         <div className='navbar_slider_dividor_icons_slider'>

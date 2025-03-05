@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import passuLogo from '../assets/Capture5.JPG'
 import passuA from '../assets/passu1.jpg';
 // Import additional images
 import passuA1 from '../assets/batura3.jpg';
@@ -55,7 +56,7 @@ const NavbarContainer = () => {
       <div className="navbar_container_main_slider">
         <div className="navbar_container_main_slider_flex">
           <div className="navbar_container_main_slider_flex_div1">
-            <img src={logo} alt="Logo" className="navbar_container_main_slider_flex_logo" />
+            <img src={passuLogo} alt="Logo" className="navbar_container_main_slider_flex_logo" />
           </div>
  {/* Hamburger Button */}
  <div className="hamburger-menu" onClick={() => setMenuOpen(!menuOpen)}>
