@@ -180,3 +180,28 @@
     margin: 0px auto;
   }
 }
+
+
+.gallery-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-images {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.image-container {
+  flex: 0 0 100%; /* Show one image at a time on mobile */
+  margin: 0;
+  position: relative;
+}
+
+@media screen and (min-width: 769px) {
+  .image-container {
+    flex: 0 0 calc(100% / 5); /* Show 5 images on desktop */
+  }
+}

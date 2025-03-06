@@ -230,7 +230,7 @@ body {
 /* Media Dropdown */
 .media-dropdown {
   position: absolute;
-  top: 35px;
+  top: 20px;
   left: 60%;
   transform: translateX(-50%) translateY(10px);
   min-width: 200px; /* Set a width specific for media dropdown */
@@ -252,7 +252,7 @@ body {
 }
 
 .media-dropdown_content {
-  padding: 10px;
+  padding: 1px;
 }
 
 .media-dropdown_content ul {

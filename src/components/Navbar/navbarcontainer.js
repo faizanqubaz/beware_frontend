@@ -36,7 +36,7 @@ const NavbarContainer = () => {
     timeoutRef.current = setTimeout(() => {
       setIsDropdownVisible(null);
       setHoveredItem(null); // Reset hovered item when leaving
-    }, 700);
+    }, 7000);
   };
 
   const handleItemHover = (item) => {

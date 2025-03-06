@@ -25,7 +25,7 @@ const Gallery = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0); // Track the visible range of images
 
-  const imagesToShow = 5; // Number of images to show at a time
+  const imagesToShow = window.innerWidth <= 768 ? 1 : 5; // Show 1 image on mobile, 5 on desktop
 
   const openLightbox = (index) => {
     setPhotoIndex(index);
@@ -52,12 +52,10 @@ const Gallery = () => {
       </div>
 
       <div className="gallery-container">
-        <h1 className="gallery-title">Batura And Passu</h1>
-
         <div className="gallery-slider">
           {startIndex > 0 && (
             <button className="arrow left-arrow" onClick={slideLeft}>
-              &#8249;
+              <FontAwesomeIcon icon={faArrowLeft} />
             </button>
           )}
 
@@ -76,7 +74,7 @@ const Gallery = () => {
 
           {startIndex + imagesToShow < allImages.length && (
             <button className="arrow right-arrow" onClick={slideRight}>
-              &#8250;
+              <FontAwesomeIcon icon={faArrowRight} />
             </button>
           )}
         </div>
@@ -90,26 +88,9 @@ const Gallery = () => {
             onMovePrevRequest={() => setPhotoIndex((photoIndex + allImages.length - 1) % allImages.length)}
             onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % allImages.length)}
             enableZoom={false}
-            toolbarButtons={[
-              <button
-                key="prev"
-                className="lightbox-nav-button"
-                onClick={() => setPhotoIndex((photoIndex + allImages.length - 1) % allImages.length)}
-              >
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </button>,
-              <button
-                key="next"
-                className="lightbox-nav-button"
-                onClick={() => setPhotoIndex((photoIndex + 1) % allImages.length)}
-              >
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>,
-            ]}
           />
         )}
       </div>
-
       <FooterComponent />
     </>
   );

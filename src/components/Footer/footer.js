@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css'; // CSS for styling
 import logo from '../assets/logo.png';
+import passuLogo from '../assets/Capture5.JPG'
 import './footer.css'; // CSS for styling
 
 const FooterComponent = () => {
@@ -9,7 +10,7 @@ const FooterComponent = () => {
             <div className="footer-top">
                 <div className="footer-logo-section">
                     {/* Replace text logo with image logo */}
-                    <img src={logo} alt="Grand Slam Ibex Logo" className="footer-logo-image" />
+                    <img src={passuLogo} alt="Grand Slam Ibex Logo" className="footer-logo-image" />
                     <p className="footer-tagline">FAIR CHASE, FAIR PRICE!</p>
                     <div className="footer-selectors">
                         <select className="footer-select">
