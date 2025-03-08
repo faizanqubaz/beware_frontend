@@ -1,6 +1,7 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import ProtectedRoute from "./components/Admin/ProtectedRoute"; // Import the ProtectedRoute component
-import ProjectDetail from './components/Projects/project-detail'
+import ProjectDetail from './components/Projects/project-detail';
 import NavbarComponent from "./components/Navbar/navbar";
 import { Helmet } from "react-helmet";
 import NavbarComponentClass from "./components/Navbar/navbarcontainer";
@@ -26,7 +27,8 @@ import GalleryComponent from "./components/Gallery/gallery";
 import VideoComponent from "./components/Video/video";
 import AdminComponentForm from "./components/Admin/admin";
 import AdminDashboardComponent from "./components/admin-dashboard/admin-dashboard";
-import HuntChartComponent from './components/HuntChart/huntchart'
+import HuntChartComponent from './components/HuntChart/huntchart';
+import WhatsAppAndChatbot from './components/partners/whatsapp'; // Import the new component
 
 function MainContent() {
   const location = useLocation();
@@ -76,12 +78,15 @@ function MainContent() {
         <Route
           path="/dashboard"
           element={
-         
+            <ProtectedRoute>
               <AdminDashboardComponent />
-          
+            </ProtectedRoute>
           }
         />
       </Routes>
+
+      {/* Add WhatsApp and Chatbot Component */}
+      <WhatsAppAndChatbot />
     </>
   );
 }
