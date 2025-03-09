@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './whatsapp.css'; // Add CSS for WhatsApp and Chatbot
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesome
+import { faMessage } from '@fortawesome/free-solid-svg-icons'; // Import the message icon
 
 const WhatsAppAndChatbot = () => {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
@@ -72,7 +74,7 @@ const WhatsAppAndChatbot = () => {
 
       {/* Chatbot Button */}
       <button className="chatbot-button" onClick={handleChatbotClick}>
-        Chat with us
+        <FontAwesomeIcon icon={faMessage} /> {/* FontAwesome message icon */}
       </button>
 
       {/* Chatbot */}

@@ -1,28 +1,56 @@
 import './popularhunt.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight, faStar, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import batura from '../../components/assets/batura2.jpg';
+import batura1 from '../../components/assets/batura3.jpg';
+import batura2 from '../../components/assets/batura1.JPG';
+import batura3 from '../../components/assets/passu1.jpg'; 
+import batura4 from '../../components/assets/focus.jpg'; 
 
 const PopularHunt = () => {
-  const [discountData, setDiscountData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fetch data from API on component mount
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`https://beware-seven.vercel.app/api/v2/ibex?hunttype=populartype`);
-        console.log(response.data.data);  // Check the image URLs in the response
-        setDiscountData(response.data.data);
-      } catch (error) {
-        console.error('Error fetching discount data:', error);
-      }
-    };
-  
-    fetchData();
-  }, []);
+  // Mock data for the popular hunts
+  const [discountData, setDiscountData] = useState([
+    {
+      id: 1,
+      _id: '1',
+      ibexphotos: [{ cloudinary_url: batura }],
+      description: 'Passu Ibex Hunt - Popular Choice',
+      newPrice: 1500,
+      priceOld: 2000,
+      huntdate: '2023-12-15',
+    },
+    {
+      id: 2,
+      _id: '2',
+      ibexphotos: [{ cloudinary_url: batura2 }],
+      description: 'Batura Ibex Hunt - Best Seller',
+      newPrice: 1700,
+      priceOld: 2200,
+      huntdate: '2023-12-20',
+    },
+    {
+      id: 3,
+      _id: '3',
+      ibexphotos: [{ cloudinary_url: batura3 }],
+      description: 'Himalayan Ibex Hunt - Top Rated',
+      newPrice: 1800,
+      priceOld: 2500,
+      huntdate: '2023-12-25',
+    },
+    {
+      id: 4,
+      _id: '4',
+      ibexphotos: [{ cloudinary_url: batura4 }],
+      description: 'Yunz Ibex Hunt - Highly Recommended',
+      newPrice: 1600,
+      priceOld: 2100,
+      huntdate: '2023-12-30',
+    },
+  ]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % discountData.length);
@@ -34,15 +62,6 @@ const PopularHunt = () => {
     );
   };
 
-  // If data is not yet loaded, return a loading indicator
-  if (!discountData.length) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <FontAwesomeIcon icon={faSpinner} spin fontSize={'36px'} color='#dbb127' />
-      </div>
-    );
-  }
-
   // Calculate the number of items to display (up to 3)
   const totalItems = discountData.length;
   const itemsToShow = Math.min(3, totalItems);
@@ -51,7 +70,6 @@ const PopularHunt = () => {
   for (let i = 0; i < itemsToShow; i++) {
     visibleImages.push(discountData[(currentIndex + i) % totalItems]);
   }
-
 
   return (
     <div className="popularhunt_main_container">
@@ -69,7 +87,6 @@ const PopularHunt = () => {
         </div>
 
         <div className='popular_main__image_container'>
-          {/* Show only 3 images */}
           {visibleImages.map((item) => (
             <Link
               key={item.id}

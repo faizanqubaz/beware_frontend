@@ -196,3 +196,32 @@
 .sponsors-card button:hover {
   background-color: #c99f1f;
 }
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .sponsors-image-container {
+    flex-direction: row; /* Keep it as a row for sliding effect */
+    overflow: hidden; /* Hide overflow */
+    width: 100%; /* Full width */
+  }
+
+  .sponsors-card {
+    flex: 0 0 100%; /* Each card takes full width */
+    margin-bottom: 20px; /* Space between images */
+    transition: transform 0.5s ease; /* Smooth sliding transition */
+  }
+
+  .sponsors-arrow-left,
+  .sponsors-arrow-right {
+    display: block; /* Show arrows on mobile */
+    font-size: 24px; /* Smaller arrows for mobile */
+  }
+
+  .sponsors-arrow-left {
+    left: 10px; /* Adjust position for mobile */
+  }
+
+  .sponsors-arrow-right {
+    right: 10px; /* Adjust position for mobile */
+  }
+}

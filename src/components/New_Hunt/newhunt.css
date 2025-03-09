@@ -70,10 +70,8 @@
 
 .newhunt_main__image_container_one_image_paragraph {
     font-size: 16px;
-    /* text-align: center; */
     padding: 0px 13px;
     letter-spacing: 2px;
-    /* word-spacing: 5px; */
     margin-bottom: 0px;
     color: white;
 }
@@ -126,7 +124,7 @@
 }
 
 .discount_main__arrow_right_hr_in_common{
-margin-top: 20px;
+    margin-top: 20px;
 }
 
 /* Responsive styles */
@@ -178,6 +176,7 @@ margin-top: 20px;
 }
 
 /* Mobile devices */
+/* Mobile devices */
 @media (max-width: 480px) {
     .newhunt_main_container_slider {
         padding-top: 10px;
@@ -192,17 +191,19 @@ margin-top: 20px;
     }
 
     .newhunt_main__image_container {
-        flex-direction: column; /* Stack images vertically on very small screens */
-        height: auto;
+        flex-direction: row; /* Keep it as a row for sliding effect */
+        overflow: hidden; /* Hide overflow */
+        width: 100%; /* Full width */
     }
 
     .newhunt_main__image_container_one {
-        flex: 0 0 100%; /* Full width for each image on small screens */
+        flex: 0 0 100%; /* Each card takes full width */
         margin-bottom: 15px; /* Space between images */
+        transition: transform 0.5s ease; /* Smooth sliding transition */
     }
 
     .newhunt_main__image_container_one_image {
-        height: 120px; /* Further adjust image height */
+        height: 120px; /* Adjust image height for mobile */
     }
 
     .newhunt_main__image_container_one_image_paragraph {
@@ -218,7 +219,7 @@ margin-top: 20px;
     }
 
     .newhunt_main__arrow_left, .newhunt_main__arrow_right {
-        font-size: 20px; /* Even smaller arrow icons for very small screens */
+        font-size: 20px; /* Smaller arrow icons for mobile */
     }
 
     .newhunt_main__arrow_right_hr {

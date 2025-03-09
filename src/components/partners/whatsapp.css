@@ -23,14 +23,16 @@
     position: fixed;
     bottom: 80px; /* Position below the WhatsApp button */
     right: 20px;
-    background-color: #25d366;
-    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+
+    background-color: #929292;
+    color: #fff;
+    margin-bottom: 11px;
   }
   
   .chatbot-button:hover {

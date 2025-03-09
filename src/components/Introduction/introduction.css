@@ -100,10 +100,20 @@
   .introduction_slider_paragraph {
     font-size: 14px;
     width: 100%;
+    line-height: 1.5;
+    margin-bottom: 10px; /* Reduced padding between paragraphs */
+  }
+
+  .introduction_slider_paragraph.truncated {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Truncate to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .introduction_slider_para_image {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .introduction_slider_para_image_slider_first,
@@ -113,9 +123,20 @@
     text-align: center;
   }
 
-  .introduction_slider_para_image {
-    width: 100%;
-    margin-bottom: 20px;
+  .read-more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #95723f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .read-more-button:hover {
+    background-color: #7a5c32;
   }
 }
 
@@ -187,5 +208,9 @@
 
   .introduction_slider_para_image {
     width: 47%;
+  }
+
+  .read-more-button {
+    display: none; /* Hide the button on desktop */
   }
 }

@@ -1,29 +1,53 @@
 import './discount.css';
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAnglesLeft, faAnglesRight, faStar, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesLeft, faAnglesRight, faStar } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+import batura from '../../components/assets/batura2.jpg';
+import batura1 from '../../components/assets/batura3.jpg';
+import batura2 from '../../components/assets/batura1.JPG';
+import batura3 from '../../components/assets/passu1.jpg';
 
 const Discount = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [discountData, setDiscountData] = useState([]);
   const [isSigningIn, setIsSigningIn] = useState(false);
   const navigate = useNavigate();
 
-  // Fetch data from API on component mount
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`https://beware-seven.vercel.app/api/v2/ibex?hunttype=topoffertype`);
-        setDiscountData(response.data.data);
-      } catch (error) {
-        console.error('Error fetching discount data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  // Mock data for the discounts
+  const [discountData, setDiscountData] = useState([
+    {
+      id: 1,
+      _id: '1',
+      ibexphotos: [{ cloudinary_url: batura }],
+      description: 'Passu Ibex Hunt - Special Offer',
+      newPrice: 1500,
+      priceOld: 2000,
+    },
+    {
+      id: 2,
+      _id: '2',
+      ibexphotos: [{ cloudinary_url: batura1 }],
+      description: 'Batura Ibex Hunt - Limited Time',
+      newPrice: 1700,
+      priceOld: 2200,
+    },
+    {
+      id: 3,
+      _id: '3',
+      ibexphotos: [{ cloudinary_url: batura2 }],
+      description: 'Himalayan Ibex Hunt - Exclusive Deal',
+      newPrice: 1800,
+      priceOld: 2500,
+    },
+    {
+      id: 4,
+      _id: '4',
+      ibexphotos: [{ cloudinary_url: batura3 }],
+      description: 'Yunz Ibex Hunt - Early Bird Offer',
+      newPrice: 1600,
+      priceOld: 2100,
+    },
+  ]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % discountData.length);
@@ -38,15 +62,9 @@ const Discount = () => {
   const handleSignInAndRedirect = async (item) => {
     setIsSigningIn(true);
     try {
-      console.log('item',item)
-      // Call the backend API to initiate Google sign-in
-      // const response = await axios.get(`http://localhost:5000/auth/google`);
-      // if (true) {
-        // On successful sign-in, navigate to the detail page
-        navigate(`/discount/${item._id}`, { state: { item } });
-      // } else {
-      //   alert('Sign-in failed. Please try again.');
-      // }
+      console.log('item', item);
+      // Simulate a sign-in process (replace with actual logic if needed)
+      navigate(`/discount/${item._id}`, { state: { item } });
     } catch (error) {
       console.error('Error during sign-in:', error);
       alert('An error occurred during sign-in. Please try again.');
@@ -55,22 +73,13 @@ const Discount = () => {
     }
   };
 
-  // If data is not yet loaded, return a loading indicator
-  if (!discountData.length) {
-    return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <FontAwesomeIcon icon={faSpinner} spin fontSize={'36px'} color='#dbb127' />
-      </div>
-    );
-  }
-
-  // Determine the number of items to display
-  const totalItems = discountData.length;
-  const itemsToShow = Math.min(3, totalItems); // Show up to 3 items
+  // Determine the number of items to display based on screen size
+  const isMobile = window.innerWidth <= 600; // Check if the screen is mobile
+  const itemsToShow = isMobile ? 1 : 3; // Show 1 card on mobile, 3 on larger screens
   const visibleImages = [];
 
   for (let i = 0; i < itemsToShow; i++) {
-    visibleImages.push(discountData[(currentIndex + i) % totalItems]);
+    visibleImages.push(discountData[(currentIndex + i) % discountData.length]);
   }
 
   return (
@@ -90,17 +99,22 @@ const Discount = () => {
 
         <div className='discount_main__image_container'>
           {visibleImages.map((item) => (
-            <div 
-              key={item.id} 
-              onClick={() => handleSignInAndRedirect(item)} 
+            <div
+              key={item.id}
+              onClick={() => handleSignInAndRedirect(item)}
               className='discount_main__image_container_one'
-              style={{ cursor: 'pointer' }}
+              style={{
+                transform: isMobile ? `translateX(-${currentIndex * 100}%)` : 'none', // Slide effect for mobile
+              }}
             >
-              <img 
-                className='discount_main__image_container_one_image' 
-                src={item.ibexphotos[0].cloudinary_url} 
-                alt={item.description} 
-              />
+              {/* Check if ibexphotos exists and has at least one element */}
+              {item.ibexphotos && item.ibexphotos.length > 0 && (
+                <img
+                  className='discount_main__image_container_one_image'
+                  src={item.ibexphotos[0].cloudinary_url}
+                  alt={item.description}
+                />
+              )}
               <p className='discount_main__image_container_one_image_paragraph'>{item.description}</p>
               <div className='discount_main__image_container_one_head'>
                 <p className='discount_main__image_container_one_image_paragraph_main_para'>package price</p>
