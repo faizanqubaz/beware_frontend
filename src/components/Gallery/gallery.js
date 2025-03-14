@@ -48,7 +48,7 @@ const Gallery = () => {
         <a href="/">Home</a> &gt; Media &gt; Gallery
       </div>
       <div className="gallery-container_head">
-        <h2 className="gallery-container_head_heading">Photo Gallery</h2>
+        <h2 className="gallery-container_head_heading">Batura IBex Gallery</h2>
       </div>
 
       <div className="gallery-container">

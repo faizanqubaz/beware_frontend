@@ -76,7 +76,7 @@ const NewHunt = () => {
         <div className='newhunt_main_container_slider_head'>
           <div className='newhunt_main_container_slider_flex'>
             <h2 className='newhunt_main_container_slider_heading'>New hunts</h2>
-            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px' }} icon={faAnglesRight} fontSize={'20px'} />
+            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px',marginTop:'20px' }} icon={faAnglesRight} fontSize={'20px'} />
           </div>
           <p className='newhunt_main_container_slider_para_head'>All New Hunts</p>
         </div>

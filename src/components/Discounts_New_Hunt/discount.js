@@ -87,8 +87,8 @@ const Discount = () => {
       <div className='discount_main_container_slider'>
         <div className='discount_main_container_slider_head'>
           <div className='discount_main_container_slider_flex'>
-            <h2 className='discount_main_container_slider_heading'>Top Offers</h2>
-            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px' }} icon={faAnglesRight} fontSize={'20px'} />
+            <h2 className='discount_main_container_slider_heading'>Available Trophies</h2>
+            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px',marginTop: '20px' }} icon={faAnglesRight} fontSize={'20px'} />
           </div>
           <p className='discount_main_container_slider_para_head'>All Offers tips</p>
         </div>
@@ -117,7 +117,7 @@ const Discount = () => {
               )}
               <p className='discount_main__image_container_one_image_paragraph'>{item.description}</p>
               <div className='discount_main__image_container_one_head'>
-                <p className='discount_main__image_container_one_image_paragraph_main_para'>package price</p>
+                <p className='discount_main__image_container_one_image_paragraph_main_para'>trophy size</p>
                 <div className='discount_main__image_container_one_image_paragraph_main_para_fsome'>
                   <FontAwesomeIcon icon={faStar} color='#dbb127' />
                   <FontAwesomeIcon icon={faStar} color='#dbb127' />
@@ -127,10 +127,10 @@ const Discount = () => {
                   <p style={{ color: '#dbb127' }}>(3.6)</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', width: '71%', color: 'white' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', width: '97%', color: 'white',alignItems:'end' }}>
                 <div className='discount_main__image_container_two_head'>
-                  <p style={{ fontSize: '25px' }}>{'$' + item.newPrice}</p>
-                  <p style={{ textDecoration: 'line-through' }}>{'$' + item.priceOld}</p>
+                  <p style={{ fontSize: '25px' }}>{'53 inch'}</p>
+                 
                 </div>
                 <p style={{ fontSize: '14px', textTransform: 'capitalize' }}>between 1 - 31 march 2024</p>
               </div>

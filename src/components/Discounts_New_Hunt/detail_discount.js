@@ -136,7 +136,7 @@ const DiscountDetail = () => {
         <div className='discount_detail_dolar_main_container_one'>
           <h2 className='discount_detail_dolar_main_container_one_heading'>About this hunt</h2>
           <p className='discount_detail_dolar_main_container_one_para'>
-            Unit 34 Cow elk hunt, with 100% success. This is a great youth hunt or hunt to fill that freezer. Good food, accommodations and great guides, what more can you ask for! Weather during these hunts are also mild making it a really comfortable cow elk hunt.<br /> <br />
+            This hunt was hunt by huntername in huntdate in the region of huntlocation and it was about inchs. the hunter is from hunterlocation.<br /> <br />
             Hunt price is for 2 hunters with 1 guide. You will be able to harvest a cow each.<br />  <br />
             Hunt Dates for 2024 -2025 season, Jan 25-27, 2025<br /> <br />
             Guide and field care provided, Pack outs are team effort. <br /> <br />

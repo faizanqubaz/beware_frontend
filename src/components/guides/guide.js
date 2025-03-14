@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const guides = [
   {
-    name: "Deep Country Lodge",
+    name: "Inayat Nazar",
     location: "Newfoundland and Labrador, Canada",
     rating: 9.7,
     reviews: 1,
@@ -20,7 +20,7 @@ const guides = [
     image: video1,
   },
   {
-    name: "Deep Country Lodge",
+    name: "Hassan Faqir",
     location: "Newfoundland and Labrador, Canada",
     rating: 9.7,
     reviews: 1,
@@ -29,7 +29,7 @@ const guides = [
     image: video1,
   },
   {
-    name: "Deep Country Lodge",
+    name: "Naseer Uddin",
     location: "Newfoundland and Labrador, Canada",
     rating: 9.7,
     reviews: 1,
@@ -38,7 +38,7 @@ const guides = [
     image: video1,
   },
   {
-    name: "Mayo Oldiri Group",
+    name: "Rahmat Karim",
     location: "Cameroon",
     rating: 9.8,
     reviews: 2,
@@ -47,7 +47,7 @@ const guides = [
     image: video1,
   },
   {
-    name: "Glacier Guides Inc.",
+    name: "Hassan Faqir",
     location: "Alaska, United States",
     rating: 9.8,
     reviews: 4,
@@ -86,7 +86,7 @@ const GuideComponent = () => {
         {/* Replace with your image source */}
         <img src={video1} alt="Deep Country Lodge" />
         <div>
-        <h2 className="lodge-name">Deep Country Lodge</h2>
+        <h2 className="lodge-name">Hassan Faqir</h2>
         <p className="lodge-location">Newfoundland and Labrador, Canada</p>
         <div className="lodge-rating">
           <FontAwesomeIcon icon={faStar} color='#dbb127' />

@@ -77,7 +77,7 @@ const PopularHunt = () => {
         <div className='popular_main_container_slider_head'>
           <div className='popular_main_container_slider_flex'>
             <h2 className='popular_main_container_slider_heading'>Popular hunts</h2>
-            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px' }} icon={faAnglesRight} fontSize={'20px'} />
+            <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px' ,marginTop:'20px'}} icon={faAnglesRight} fontSize={'20px'} />
           </div>
           <p className='popular_main_container_slider_para_head'>All Offers</p>
         </div>

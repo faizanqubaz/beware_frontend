@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+   
     margin: auto;
     position: relative;
   }
@@ -83,11 +83,11 @@
   }
   
   .left-arrow {
-    left: -40px;
+    left: 0px;
   }
   
   .right-arrow {
-    right: -40px;
+    right: 11px;
   }
   
   .breadcrumb_video {

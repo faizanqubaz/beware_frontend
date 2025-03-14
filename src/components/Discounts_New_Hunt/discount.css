@@ -3,7 +3,7 @@
 }
 
 .discount_main_container_slider {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     position: relative;
   
@@ -98,11 +98,7 @@
 .discount_main__image_container_two_head {
   
     /* max-width: 187px; */
-    font-family: "Roboto", sans-serif;
-    width: 100%;
-    margin-left: 22px;
-    overflow: hidden;
-    color: white;
+   padding-left: 40px;
 }
 /* // Google Maps API key - replace with your actual API key
 const apiKey = 'AIzaSyC6xvlbMFrLYt9ExmJvyFnd5pawC_Al4rs'; */
@@ -141,8 +137,8 @@ const apiKey = 'AIzaSyC6xvlbMFrLYt9ExmJvyFnd5pawC_Al4rs'; */
 
 .discount_main__image_container_one_image_paragraph_main_para{
     display: block;
-    margin: 0 110px 4px 0;
-    font-size: 12px;
+    margin: 0 0px 0px 0;
+    font-size: 25px;
     color: #dbb127;
     overflow: hidden;
     white-space: nowrap;

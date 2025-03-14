@@ -29,6 +29,8 @@ import AdminComponentForm from "./components/Admin/admin";
 import AdminDashboardComponent from "./components/admin-dashboard/admin-dashboard";
 import HuntChartComponent from './components/HuntChart/huntchart';
 import WhatsAppAndChatbot from './components/partners/whatsapp'; // Import the new component
+import PopularDestinations from './components/PopularDestinations/populardestination';
+import PopularDestinationDetail from './components/PopularDestinations/populardestinationdetail'
 
 function MainContent() {
   const location = useLocation();
@@ -56,6 +58,7 @@ function MainContent() {
               <NewHuntComponent />
               <PartnersComponents />
               <GuideComponent />
+              <PopularDestinations />
               <TeamComponent />
               <FooterComponents />
             </>
@@ -64,6 +67,7 @@ function MainContent() {
         <Route path="/discount/:id" element={<DetailDiscountComponent />} />
         <Route path="/popularhunt/:id" element={<DetailPopularHuntComponent />} />
         <Route path="/newhunt/:id" element={<NewHuntDetailContainer />} />
+        <Route path="/populardestinationdetail/:id" element={<PopularDestinationDetail />} />
         <Route path="/contactus" element={<ContactUSContainer />} />
         <Route path="/terms_and_conditions" element={<TermsAndConditionComponent />} />
         <Route path="/aboutus" element={<AboutUsContainer />} />
