@@ -1,0 +1,128 @@
+/* Container */
+.animal-destination-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Section */
+.animal-destination-container_top-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.animal-destination-container_top-section h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.animal-destination-container_top-section p {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #ae8b2b;
+    color: white;
+}
+
+.secondary-button {
+    background-color: #333;
+    color: white;
+}
+
+/* Image Grid */
+.animal-destination-container_top-section_image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.animal-card {
+    flex: 1 1 calc(33.333% - 40px); /* Three cards per row with gap */
+    max-width: calc(33.333% - 40px); /* Ensure three cards per row */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.animal-card:hover {
+    transform: scale(1.05); /* Slightly zoom in the card */
+}
+
+.animal-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth transition for image zoom */
+}
+
+.animal-card:hover .animal-image {
+    transform: scale(1.1); /* Slightly zoom in the image */
+}
+
+/* Text Overlay */
+.animal-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.animal-info-overlay_heading {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+.animal-info-overlay p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.animal-info-overlay_heading_button_transparent {
+    background: transparent; /* Transparent background */
+    border: 1px solid white; /* White border */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Space above the button */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.animal-info-overlay_heading_button_transparent:hover {
+    background: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}

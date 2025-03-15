@@ -9,7 +9,7 @@ import batura2 from '../../components/assets/batura1.JPG';
 import batura3 from '../../components/assets/passu1.jpg'; 
 import batura4 from '../../components/assets/focus.jpg'; 
 
-const PopularHunt = () => {
+const PopularDestinations = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Mock data for the popular hunts
@@ -19,24 +19,40 @@ const PopularHunt = () => {
       _id: '1',
       ibexphotos: [{ cloudinary_url: batura }],
       name: 'Batura',
+      location: {
+        lat: 36.5115,
+        lng: 74.5716,
+      },
     },
     {
       id: 2,
       _id: '2',
       ibexphotos: [{ cloudinary_url: batura2 }],
       name: 'Passu',
+      location: {
+        lat: 36.5115,
+        lng: 74.5716,
+      },
     },
     {
       id: 3,
       _id: '3',
       ibexphotos: [{ cloudinary_url: batura3 }],
-      name: 'Yunz'
+      name: 'Yunz',
+      location: {
+        lat: 36.5115,
+        lng: 74.5716,
+      },
     },
     {
       id: 4,
       _id: '4',
       ibexphotos: [{ cloudinary_url: batura4 }],
-      name: 'Avadagar'
+      name: 'Avadagar',
+      location: {
+        lat: 36.5115,
+        lng: 74.5716,
+      },
     },
   ]);
 
@@ -54,6 +70,7 @@ const PopularHunt = () => {
   const totalItems = discountData.length;
   const itemsToShow = Math.min(3, totalItems);
   const visibleImages = [];
+
 
   for (let i = 0; i < itemsToShow; i++) {
     visibleImages.push(discountData[(currentIndex + i) % totalItems]);
@@ -76,6 +93,7 @@ const PopularHunt = () => {
 
         <div className='populardestination_main__image_container'>
           {visibleImages.map((item) => (
+            console.log(item),
             <Link
               key={item.id}
               to={`/populardestinationdetail/${item._id}`}
@@ -108,4 +126,4 @@ const PopularHunt = () => {
   );
 };
 
-export default PopularHunt;
+export default PopularDestinations;

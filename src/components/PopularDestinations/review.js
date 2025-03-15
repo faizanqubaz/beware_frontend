@@ -27,7 +27,7 @@ const reviews = [
       "Hunt of a lifetime and Grateful to Daniel and Ashley for making it possible.",
       "Planning a return trip!"
     ],
-    rating: "100 of 10"
+    rating: "10"
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ function DestinationReviews() {
     <div className="review_destination_main">
       <h1 className='review_destination_main_heading'>Reviews</h1>
       <div className="reviews-container">
-        <button className="nav-button left" onClick={handlePrevious}>&lt;</button>
+        <button className="review_destination_nav-button left" onClick={handlePrevious}>&lt;</button>
         {visibleReviews.map((review) => (
           <div key={review.id} className="review_container">
             <div className='review_container_left_side'>
@@ -71,9 +71,9 @@ function DestinationReviews() {
             </div>
             <div className="reviews_container_right_side">
               <h2 className='review_container_description'>{review.title}</h2>
-              <p>Outfitter: <strong>{review.owner}</strong></p>
+              <p className='review_container_description_para'>Outfitter: <strong>{review.owner}</strong></p>
               <button className="rating-button">{review.rating || '10.0'}</button> <span>of 10</span>
-              <ul>
+              <ul className='review_container_description_para_ul'>
                 {review.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
                 ))}
@@ -81,7 +81,7 @@ function DestinationReviews() {
             </div>
           </div>
         ))}
-        <button className="nav-button right" onClick={handleNext}>&gt;</button>
+        <button className="review_destination_nav-button right" onClick={handleNext}>&gt;</button>
       </div>
     </div>
   );
