@@ -30,7 +30,7 @@ const PopularDestinations = () => {
       ibexphotos: [{ cloudinary_url: batura2 }],
       name: 'Passu',
       location: {
-        lat: 36.5115,
+        lat: 34.5115,
         lng: 74.5716,
       },
     },
@@ -40,7 +40,7 @@ const PopularDestinations = () => {
       ibexphotos: [{ cloudinary_url: batura3 }],
       name: 'Yunz',
       location: {
-        lat: 36.5115,
+        lat: 33.5115,
         lng: 74.5716,
       },
     },
@@ -103,7 +103,7 @@ const PopularDestinations = () => {
               <div className="populardestination_main__image_wrapper">
                 <img
                   className='populardestination_main__image_container_one_image'
-                  src={item.ibexphotos[0].cloudinary_url}
+                  src={item.ibexphotos[0]?.cloudinary_url}
                   alt={item.description}
                 />
                 <div className="populardestination_main__image_overlay">

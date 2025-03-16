@@ -8,6 +8,9 @@ import batura1 from '../../components/assets/batura3.jpg';
 import batura2 from '../../components/assets/batura1.JPG';
 import batura3 from '../../components/assets/passu1.jpg'; 
 import batura4 from '../../components/assets/focus.jpg'; 
+import bird from '../../components/assets/bird.jpg';
+import hospility from '../../components/assets/hospitality.jpg';
+import snow_leopard from '../../components/assets/snow_leopard.jpg';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import HuntingInfo from './huntinginfo';
 import DestinationReview from './review';
@@ -30,21 +33,21 @@ console.log('l',item)
         <h1 className="why-argentina-title">Why {item?.name}</h1>
         <div className="why-argentina-content">
           <div className="why-argentina-section">
-            <img src={batura2} alt="Wingshooting" className="why-argentina-section-image" />
+            <img src={bird} alt="Wingshooting" className="why-argentina-section-image" />
             <h2 className="why-argentina-section-title">Wingshooting</h2>
             <p className="why-argentina-section-description">
               World-class high-volume wingshooting for doves, pigeons, ducks, and partridges
             </p>
           </div>
           <div className="why-argentina-section">
-            <img src={batura} alt="Big-game hunting" className="why-argentina-section-image" />
+            <img src={snow_leopard} alt="Big-game hunting" className="why-argentina-section-image" />
             <h2 className="why-argentina-section-title">Big-game hunting</h2>
             <p className="why-argentina-section-description">
               Excellent big-game hunting, including some of the world's best red stag hunts
             </p>
           </div>
           <div className="why-argentina-section">
-            <img src={batura3} alt="Accommodation and hospitality" className="why-argentina-section-image" />
+            <img src={hospility} alt="Accommodation and hospitality" className="why-argentina-section-image" />
             <h2 className="why-argentina-section-title">Accommodation and hospitality</h2>
             <p className="why-argentina-section-description">
               Upscale hunting accommodations with excellent food and wine are typical on {item?.name} hunts
