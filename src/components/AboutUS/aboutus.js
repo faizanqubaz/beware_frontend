@@ -2,6 +2,8 @@ import React from 'react';
 import './aboutus.css'; // CSS file for styling
 import aboutImage from '../assets/passu1.jpg'; // Ensure you import the image correctly
 import FooterComponent from '../Footer/footer';
+import AnimalDestination from '../PopularDestinations/destinationanimal';
+import DestinationReviews from '../PopularDestinations/review';
 
 const AboutUs = () => {
   return (
@@ -32,6 +34,8 @@ This attitude always shows through when you meet or talk with him and all of his
         </p>
       </div>
     </div>
+ 
+      <AnimalDestination />
     <FooterComponent />
     </>
   );

@@ -153,6 +153,9 @@
     .populardestination_main_container_slider_para_head {
         font-size: 0.85rem;
     }
+    .populardestination_main_container_slider{
+ height: auto;
+    }
 }
 
 @media (max-width: 576px) {

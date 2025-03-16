@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './destinationanimal.css'; // Import the CSS file for styling
 import batura4 from '../../components/assets/focus.jpg'; 
 import batura from '../../components/assets/batura2.jpg';
@@ -20,6 +20,16 @@ const AnimalDestination = () => {
         { name: 'Partridge', price: 1600, hunts: 18, image: batura3 },
     ];
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % animals.length);
+    };
+
+    const prevImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + animals.length) % animals.length);
+    };
+
     return (
         <div className="animal-destination-container">
             {/* Top Section with Text and Buttons */}
@@ -29,21 +39,22 @@ const AnimalDestination = () => {
 
             {/* Image Grid */}
             <div className="animal-destination-container_top-section_image-grid">
+                <button className="navigation-icon left" onClick={prevImage}>‹</button>
                 {animals.map((animal, index) => (
-                    <div key={index} className="animal-card">
+                    <div key={index} className={`animal-card ${index === currentIndex ? 'active' : ''}`}>
                         <img src={animal.image} alt={animal.name} className="animal-image" />
                         <div className="animal-info-overlay">
                             <div>
-                            <h2 className='animal-info-overlay_heading'>{animal.name}</h2>
-                            <p>from ${animal.price}</p>
+                                <h2 className='animal-info-overlay_heading'>{animal.name}</h2>
+                                <p>from ${animal.price}</p>
                             </div>  
                             <button className="animal-info-overlay_heading_button_transparent">
-        {animal.hunts} hunts
-    </button>
-                           
+                                {animal.hunts} hunts
+                            </button>
                         </div>
                     </div>
                 ))}
+                <button className="navigation-icon right" onClick={nextImage}>›</button>
             </div>
         </div>
     );

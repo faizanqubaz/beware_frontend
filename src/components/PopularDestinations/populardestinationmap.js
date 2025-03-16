@@ -10,9 +10,10 @@ const mapContainerStyle = {
   height: '500px',
 };
 
-const center = {
-  lat: 36.5115, // Latitude for Batura Glacier, Hunza
-  lng: 74.5716, // Longitude for Batura Glacier, Hunza
+// Default center for the map (Passu coordinates)
+const defaultCenter = {
+  lat: 36.5115, // Latitude for Passu
+  lng: 74.5716, // Longitude for Passu
 };
 
 // Coordinates for the Passu territory (example coordinates)
@@ -24,7 +25,7 @@ const passuTerritory = [
   { lat: 36.48, lng: 76.56 },
 ];
 
-const PopularDestinationDetailLocation = ({ location, name }) => {
+const PopularDestinationDetailLocation = ({ location = defaultCenter, name = 'Passu' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { pathname } = useLocation(); // Get current route location
 
@@ -35,14 +36,21 @@ const PopularDestinationDetailLocation = ({ location, name }) => {
     { id: 3, _id: '3', ibexphotos: [{ cloudinary_url: batura3 }], name: 'Yashpert' },
   ];
 
-  // Calculate the number of items to display (up to 3)
-  const totalItems = discountData.length;
-  const itemsToShow = Math.min(3, totalItems);
-  const visibleImages = [];
+  // Auto-slide functionality for mobile only
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768; // Check if the screen width is mobile size
+    let interval;
 
-  for (let i = 0; i < itemsToShow; i++) {
-    visibleImages.push(discountData[(currentIndex + i) % totalItems]);
-  }
+    if (isMobile) {
+      interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % discountData.length);
+      }, 3000); // Change slide every 3 seconds
+    }
+
+    return () => {
+      if (interval) clearInterval(interval); // Cleanup interval on unmount
+    };
+  }, [discountData.length]);
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: 'AIzaSyC6xvlbMFrLYt9ExmJvyFnd5pawC_Al4rs', // Replace with your API key
@@ -60,7 +68,7 @@ const PopularDestinationDetailLocation = ({ location, name }) => {
     <div className="argentina-map-container_main">
       <div className="argentina-map-container">
         <h2 className="argentina-map-title">{name} on Map</h2>
-        <GoogleMap mapContainerStyle={mapContainerStyle} zoom={10} center={center}>
+        <GoogleMap mapContainerStyle={mapContainerStyle} zoom={10} center={location}>
           <Marker position={location} icon={{ url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }} />
           <Polygon
             paths={passuTerritory}
@@ -74,8 +82,13 @@ const PopularDestinationDetailLocation = ({ location, name }) => {
 
       <div className="popular_main_destination_main_container">
         <div className="popular_main_destination_main_container_slider">
-          <div className="popular_main_destination_main__image_container">
-            {visibleImages.map((item) => (
+          <div
+            className="popular_main_destination_main__image_container"
+            style={{
+              transform: window.innerWidth <= 768 ? `translateX(${-currentIndex * 100}%)` : 'none', // Slide only on mobile
+            }}
+          >
+            {discountData.map((item, index) => (
               <Link
                 key={item.id}
                 to={`/populardestinationdetail/${item._id}`}

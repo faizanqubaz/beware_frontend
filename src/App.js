@@ -31,6 +31,7 @@ import HuntChartComponent from './components/HuntChart/huntchart';
 import WhatsAppAndChatbot from './components/partners/whatsapp'; // Import the new component
 import PopularDestinations from './components/PopularDestinations/populardestination';
 import PopularDestinationDetail from './components/PopularDestinations/populardestinationdetail'
+import PopularDestinationDetailLocation from './components/PopularDestinations/populardestinationmap';
 
 function MainContent() {
   const location = useLocation();
@@ -52,7 +53,7 @@ function MainContent() {
             <>
               <SliderComponent />
               <IntroductionComponent />
-              <MapContainerComponent />
+              <PopularDestinationDetailLocation  /> 
               <DiscountComponent />
               <PopularHuntComponent />
               <NewHuntComponent />

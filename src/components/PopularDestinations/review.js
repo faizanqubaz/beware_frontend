@@ -48,14 +48,16 @@ function DestinationReviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 2) % reviews.length);
+    setCurrentIndex((prevIndex) => (prevIndex + (window.innerWidth <= 768 ? 1 : 2)) % reviews.length);
   };
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 2 + reviews.length) % reviews.length);
+    setCurrentIndex((prevIndex) => (prevIndex - (window.innerWidth <= 768 ? 1 : 2) + reviews.length) % reviews.length);
   };
 
-  const visibleReviews = reviews.slice(currentIndex, currentIndex + 2);
+  const visibleReviews = window.innerWidth <= 768
+    ? [reviews[currentIndex]]
+    : reviews.slice(currentIndex, currentIndex + 2);
 
   return (
     <div className="review_destination_main">
@@ -63,7 +65,7 @@ function DestinationReviews() {
       <div className="reviews-container">
         <button className="review_destination_nav-button left" onClick={handlePrevious}>&lt;</button>
         {visibleReviews.map((review) => (
-          <div key={review.id} className="review_container">
+          <div key={review.id} className={`review_container ${window.innerWidth <= 768 ? 'active' : ''}`}>
             <div className='review_container_left_side'>
               <FontAwesomeIcon icon={faUserCircle} className='review_container_left_side_icon' />
               <h2 className='review_container_left_side_name'>{review.owner}</h2>

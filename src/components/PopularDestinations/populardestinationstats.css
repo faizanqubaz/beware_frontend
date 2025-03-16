@@ -126,6 +126,15 @@
     .populardestinationdetail-destination-content_head-view-stat-label {
         font-size: 0.8rem; /* Adjust font size for mobile */
     }
+    .populardestinationdetail-image-container-image {
+       height: auto;
+    }
+    .populardestinationdetail-destination-content_head{
+font-size: 38px;
+    }
+    .populardestinationdetail_main{
+height: 589px;
+    }
 }
 
 /* Responsive Design for Tablet Screens */
