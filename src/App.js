@@ -32,6 +32,7 @@ import WhatsAppAndChatbot from './components/partners/whatsapp'; // Import the n
 import PopularDestinations from './components/PopularDestinations/populardestination';
 import PopularDestinationDetail from './components/PopularDestinations/populardestinationdetail'
 import PopularDestinationDetailLocation from './components/PopularDestinations/populardestinationmap';
+import SearchHuntingPage from './components/PopularDestinations/searchhunt';
 
 function MainContent() {
   const location = useLocation();
@@ -78,6 +79,7 @@ function MainContent() {
         <Route path="/admin-sigin" element={<AdminComponentForm />} />
         <Route path="/projectdetail/:id" element={<ProjectDetail />} />
         <Route path="/huntchart" element={<HuntChartComponent />} />
+        <Route path="/searchhunt" element={<SearchHuntingPage />} />
 
         {/* Protect the Dashboard Route */}
         <Route

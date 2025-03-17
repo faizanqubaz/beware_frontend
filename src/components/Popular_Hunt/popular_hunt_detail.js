@@ -1,10 +1,10 @@
 import React ,{useEffect,useState}from 'react';
-import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow,faAnglesRight, faHeart, faShareAlt, faStar } from '@fortawesome/free-solid-svg-icons';
 import DiscountMap  from '../Discounts_New_Hunt/discount_map';
 import FooterComponent from '../Footer/footer'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useLocation } from 'react-router-dom';
 import './popular_hunt_image.css'
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -21,6 +21,8 @@ import logo4 from '../../components/assets/batura2.jpg';
 import './popular_hunt_detail.css';
 
 const PopularHuntDetail = () => {
+   const location = useLocation();
+    const { item } = location.state;
     const [isOpen, setIsOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
     const openGallery = (index) => {
@@ -87,8 +89,7 @@ const email = 'faizanquba1@gmail.com'
         }
       };
 
-    const location = useLocation();
-    const { item } = location.state;
+  
 
     const destination = {
         lat: item?.latitude,  // Ensure the latitude is properly fetched
@@ -107,7 +108,7 @@ const email = 'faizanquba1@gmail.com'
             <div className="discount_detail_container">
                 <div className='discount_detail_main_container_content'>
                     <div>
-                        <h2 className='discount_detail_main_container_heading'>{item.description}</h2>
+                        <h2 className='discount_detail_main_container_heading'>{item?.description}</h2>
                         <div className='discount_detail_main_container_content_one'>
                             <FontAwesomeIcon color='#dbb127' style={{ marginLeft: '10px' }} icon={faLocationArrow} fontSize={'20px'} />
 
@@ -132,9 +133,9 @@ const email = 'faizanquba1@gmail.com'
                     <div>
                         <p className='discount_detail_main_container_content_two_paragraph'>Package price</p>
                         <div className='discount_detail_main_container_content_two'>
-                            <h2 className='discount_detail_main_container_content_two_head'>{'$'+item.newPrice}</h2>
+                            <h2 className='discount_detail_main_container_content_two_head'>{'$'+item?.newPrice}</h2>
                         </div>
-                        <p className='discount_detail_main_container_content_two_para_two previous-price'>{'$'+item.priceOld}</p>
+                        <p className='discount_detail_main_container_content_two_para_two previous-price'>{'$'+item?.priceOld}</p>
 
                     </div>
                 </div>
@@ -144,14 +145,22 @@ const email = 'faizanquba1@gmail.com'
 
             <div className='discount_detail_image_main_container'>
                 <div className='discount_detail_image_main_container_one'>
-                    <img className='discount_detail_image_main_container_one_iamge' src={item.ibexphotos[0].cloudinary_url} alt='sa' />
+                <img
+  className='discount_detail_image_main_container_one_iamge'
+  src={item.ibexphotos && item.ibexphotos.length > 0 ? item.ibexphotos[0].cloudinary_url : 'fallback_image.jpg'}
+  alt='sa'
+/>
                 </div>
 
                 <div className='discount_detail_image_main_container_two'>
                     <div className='discount_detail_image_main_container_one_iamge_round_flex'>
-                        <img className='discount_detail_image_main_container_one_iamge_round' src={item.ibexphotos[0].cloudinary_url} alt='sa' />
+                    <img
+  className='discount_detail_image_main_container_one_iamge'
+  src={item.ibexphotos && item.ibexphotos.length > 0 ? item.ibexphotos[0].cloudinary_url : 'fallback_image.jpg'}
+  alt='sa'
+/>
                         <div>
-                            <p className='discount_detail_image_main_container_one_iamge_round_para_one'>{item.guideName} operation(Guide)</p>
+                            <p className='discount_detail_image_main_container_one_iamge_round_para_one'>{item?.guideName} operation(Guide)</p>
                             <p className='discount_detail_image_main_container_one_iamge_round_para_two'>passu gojal</p>
                             <FontAwesomeIcon icon={faStar} color='#dbb127' />
                             <FontAwesomeIcon icon={faStar} color='#dbb127' />
@@ -168,10 +177,10 @@ const email = 'faizanquba1@gmail.com'
                         <h2 className='discount_detail_image_main_container_one_iamge_round_para_three_container_head'>More about us</h2>
                         <div className='discount_detail_scrollable_content'>
                             <p className='discount_detail_image_main_container_one_iamge_round_para_three_container_para'>
-                                {item.guideName}
-                                {item.hunterlocation}
+                                {item?.guideName}
+                                {item?.hunterlocation}
                                 9.4
-                                Response rate: {item.rate}
+                                Response rate: {item?.rate}
                                 Response time: within a day
                                 Contact outfitter
                                 <br />
@@ -206,8 +215,8 @@ const email = 'faizanquba1@gmail.com'
                 <div className='discount_detail_dolar_main_container_two'>
 
                     <div className='discount_detail_dolar_main_container_two_dolar_head'>
-                        <h2 className='discount_detail_dolar_main_container_two_dolar_head_heading'>{'$'+item.newPrice}</h2>
-                        <p className='discount_detail_dolar_main_container_two_dolar_head_para previous-price'>{'$'+item.priceOld}</p>
+                        <h2 className='discount_detail_dolar_main_container_two_dolar_head_heading'>{'$'+item?.newPrice}</h2>
+                        <p className='discount_detail_dolar_main_container_two_dolar_head_para previous-price'>{'$'+item?.priceOld}</p>
                     </div>
 
                     <div className='discount_detail_dolar_main_container_two_dolar_button_head'>
