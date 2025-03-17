@@ -18,11 +18,18 @@ const defaultCenter = {
 
 // Coordinates for the Passu territory (example coordinates)
 const passuTerritory = [
-  { lat: 36.28, lng: 74.54 },
-  { lat: 36.52, lng: 74.58 },
-  { lat: 36.51, lng: 74.60 },
-  { lat: 36.49, lng: 74.59 },
-  { lat: 36.48, lng: 76.56 },
+  { lat: 36.5000, lng: 74.9000 },  // Janabad Village (north)
+  { lat: 36.4870, lng: 74.5894 },  // Passu Sar Peak (northwest)
+  { lat: 36.5104, lng: 74.5225 },  // Batura Sar Peak (west)
+  { lat: 36.5333, lng: 74.6667 },  // Batura Glacier (northwest)
+  { lat: 36.490, lng: 74.780 },    // West of Passu
+  { lat: 36.4560, lng: 74.8700 },  // Khuramabad (southwest)
+  { lat: 36.450, lng: 74.820 },    // South of Passu
+  { lat: 36.4300, lng: 74.8500 },  // Yeshperth Village (southeast)
+  { lat: 36.4225, lng: 74.8600 },  // Gucesm Village (approximate southeast)
+  { lat: 36.4642, lng: 74.8856 },  // Passu Suspension Bridge (east)
+  { lat: 36.467, lng: 74.900 },    // Passu Village (center north)
+  { lat: 36.4694, lng: 74.8656 },  // Passu Cones (northeast)
 ];
 
 const PopularDestinationDetailLocation = ({ location = defaultCenter, name = 'Passu' }) => {
