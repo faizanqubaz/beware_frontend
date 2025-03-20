@@ -127,7 +127,10 @@
 .discount_detail_scrollable_content {
     max-height: 200px; /* Smaller height for mobile */
 }
-
+.gallery-container_images{
+    max-width: 1200px;
+    margin: auto;
+}
 /* Media Queries for tablets and larger screens */
 @media (min-width: 768px) {
     .discount_detail_main_container {

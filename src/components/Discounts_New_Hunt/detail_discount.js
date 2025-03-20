@@ -28,7 +28,7 @@ const DiscountDetail = () => {
     lng: item?.longitude, // Ensure the longitude is properly fetched
   };
 
-  const googleMapsUrl = "https://earth.google.com/web/search/Alaska";
+  const googleMapsUrl = "https://earth.google.com/web/search/Passu";
 
   useEffect(() => {
     window.scrollTo(0, 0);

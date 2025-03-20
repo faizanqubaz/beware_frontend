@@ -5,6 +5,8 @@ import { faLocationArrow, faHeart, faShareAlt, faStar } from '@fortawesome/free-
 import FooterComponent from '../Footer/footer'
 import './new_hunt_detail.css';
 import DiscountMap from '../Discounts_New_Hunt/discount_map'
+import DestinationReviews from '../PopularDestinations/review';
+import Gallery from '../Gallery/gallery';
 
 const NewHuntDetail = () => {
 const phoneNumber='3554329249'
@@ -173,10 +175,14 @@ const email = 'faizanquba1@gmail.com'
                     </div>
                 </div>
             </div>
+            <Gallery />
+            <DestinationReviews />
             <div className='discount_detail_dolar_main_container_map'>
                 <h2 className='discount_detail_dolar_main_container_map_head'>Trip on the Map</h2>
             <DiscountMap destination={destination} />
+
             </div>
+            
             <FooterComponent />
             
         </div>
