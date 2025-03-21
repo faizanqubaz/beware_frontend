@@ -28,17 +28,17 @@ const PopularDestinationDetailStats = ({ name }) => {
               View 16 hunts
             </button>
             <p className='populardestinationdetail-destination-content_head-view-hunts-para'>
-              16 hunting trips from 33 countries starting from $945
+              16 hunting trips from many countries starting from November to April
             </p>
           </div>
         </div>
         <div className="populardestinationdetail-destination-content_head-view-hunts-stats-grid">
           <div className="populardestinationdetail-destination-content_head-view-hunts-stat-item">
-            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">164</span>
+            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">16</span>
             <span className="populardestinationdetail-destination-content_head-view-stat-label">hunts</span>
           </div>
           <div className="populardestinationdetail-destination-content_head-view-hunts-stat-item">
-            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">$945</span>
+            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">2015</span>
             <span className="populardestinationdetail-destination-content_head-view-stat-label">starting from</span>
           </div>
           <div className="populardestinationdetail-destination-content_head-view-hunts-stat-item">
@@ -46,8 +46,8 @@ const PopularDestinationDetailStats = ({ name }) => {
             <span className="populardestinationdetail-destination-content_head-view-stat-label">animals</span>
           </div>
           <div className="populardestinationdetail-destination-content_head-view-hunts-stat-item">
-            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">15105km</span>
-            <span className="populardestinationdetail-destination-content_head-view-stat-label">to the nearest trip</span>
+            <span className="populardestinationdetail-destination-content_head-view-hunts-stat-number">2025</span>
+            <span className="populardestinationdetail-destination-content_head-view-stat-label">to</span>
           </div>
         </div>
       </div>

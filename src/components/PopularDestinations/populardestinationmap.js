@@ -25,12 +25,41 @@ const passuTerritory = [
   { lat: 36.490, lng: 74.780 },    // West of Passu
   { lat: 36.4560, lng: 74.8700 },  // Khuramabad (southwest)
   { lat: 36.450, lng: 74.820 },    // South of Passu
-  { lat: 36.4300, lng: 74.8500 },  // Yeshperth Village (southeast)
+  { lat: 36.4300, lng: 74.8500 },  // Yeshpert Village (southeast)
   { lat: 36.4225, lng: 74.8600 },  // Gucesm Village (approximate southeast)
   { lat: 36.4642, lng: 74.8856 },  // Passu Suspension Bridge (east)
   { lat: 36.467, lng: 74.900 },    // Passu Village (center north)
   { lat: 36.4694, lng: 74.8656 },  // Passu Cones (northeast)
+  { lat: 36.4333, lng: 74.6833 },  // Shispare Sar (west of Passu)
+  { lat: 36.4350, lng: 74.8400 },  // Yeshpert (additional point for better boundary)
+  { lat: 36.4200, lng: 74.8550 },  // Gucesm Valley (approximate)
+  { lat: 36.4600, lng: 74.8900 }   // Rainbow Bridge (approximate)
 ];
+
+// Function to calculate the center of the territory
+const calculateCenter = (coordinates) => {
+  const latSum = coordinates.reduce((sum, point) => sum + point.lat, 0);
+  const lngSum = coordinates.reduce((sum, point) => sum + point.lng, 0);
+  return {
+    lat: latSum / coordinates.length,
+    lng: lngSum / coordinates.length,
+  };
+};
+
+// Function to sort coordinates in clockwise order
+const sortCoordinatesClockwise = (coordinates, center) => {
+  return coordinates.slice().sort((a, b) => {
+    const angleA = Math.atan2(a.lat - center.lat, a.lng - center.lng);
+    const angleB = Math.atan2(b.lat - center.lat, b.lng - center.lng);
+    return angleA - angleB;
+  });
+};
+
+// Calculate the center of the Passu territory
+const territoryCenter = calculateCenter(passuTerritory);
+
+// Sort the coordinates in clockwise order
+const sortedPassuTerritory = sortCoordinatesClockwise(passuTerritory, territoryCenter);
 
 const PopularDestinationDetailLocation = ({ location = defaultCenter, name = 'Passu' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -78,7 +107,7 @@ const PopularDestinationDetailLocation = ({ location = defaultCenter, name = 'Pa
         <GoogleMap mapContainerStyle={mapContainerStyle} zoom={10} center={location}>
           <Marker position={location} icon={{ url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png' }} />
           <Polygon
-            paths={passuTerritory}
+            paths={sortedPassuTerritory} // Use sorted coordinates for smoother boundary
             options={{ strokeColor: '#FF0000', strokeOpacity: 0.8, strokeWeight: 2, fillColor: '#FF0000', fillOpacity: 0.35 }}
           />
         </GoogleMap>

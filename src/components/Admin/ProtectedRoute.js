@@ -1,10 +1,11 @@
 import { Navigate, Outlet } from 'react-router-dom';
 
-const ProtectedRoute = () => {
-  const authToken = localStorage.getItem('authToken'); // Check for the token
-  console.log('authToken',authToken)
+const ProtectedRoute = ({ children }) => {
+  const authToken = localStorage.getItem('authToken');
+  console.log('authToken', authToken);
 
-  return authToken ? <Outlet /> : <Navigate to="/admin-sigin" />;
+  return authToken ? children : <Navigate to="/admin-sigin" />;
 };
+
 
 export default ProtectedRoute;
