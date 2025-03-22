@@ -70,7 +70,7 @@ const FooterComponent = () => {
 
             <div className="footer-bottom">
                 <div className="footer-copyright">
-                    <p>Copyright © 2024 GrandSlamIbex.com</p>
+                    <p>Copyright © 2025 passuconservency.com</p>
                 </div>
                 <div className="footer-social-icons">
                     <a href="#"><i className="fab fa-facebook"></i></a>
@@ -79,8 +79,8 @@ const FooterComponent = () => {
                     <a href="#"><i className="fab fa-instagram"></i></a>
                 </div>
                 <div className="footer-partner">
-                    <h4>|Grand <span>Slam</span> Ibex|</h4>
-                    <p>Online marketplace for fishing trips from the BYH team!</p>
+                    <h4>|Passu <span>Conservency</span> Ibex|</h4>
+                    <p>Online marketplace for hunt trips from the Passu team!</p>
                 </div>
             </div>
         </footer>
