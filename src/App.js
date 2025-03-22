@@ -33,6 +33,7 @@ import PopularDestinations from './components/PopularDestinations/populardestina
 import PopularDestinationDetail from './components/PopularDestinations/populardestinationdetail'
 import PopularDestinationDetailLocation from './components/PopularDestinations/populardestinationmap';
 import SearchHuntingPage from './components/PopularDestinations/searchhunt';
+import AnimalDestination from './components/PopularDestinations/destinationanimal';
 
 function MainContent() {
   const location = useLocation();
@@ -61,6 +62,7 @@ function MainContent() {
               <PartnersComponents />
               <GuideComponent />
               <PopularDestinations />
+              <AnimalDestination />
               <TeamComponent />
               <FooterComponents />
             </>
