@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./guide.css";
 import video1 from '../assets/batura2.jpg';
 import video2 from '../assets/passuv1.mp4';
+import video3 from '../assets/video12.mp4';
 import { useMediaQuery } from "react-responsive";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,7 +19,7 @@ const guides = [
     reviews: 1,
     description:
       "Hunting Newfoundland for Trophy Moose, Black Bear and Woodland Caribou, is the hunting experience of a lifetime.",
-    image: video2,
+    image: video3,
   },
   {
     name: "Hassan Faqir",
@@ -27,7 +28,7 @@ const guides = [
     reviews: 1,
     description:
       "Hunting Newfoundland for Trophy Moose, Black Bear and Woodland Caribou, is the hunting experience of a lifetime.",
-    image: video2,
+    image: video3,
   },
   {
     name: "Naseer Uddin",
