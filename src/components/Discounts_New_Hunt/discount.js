@@ -7,6 +7,9 @@ import batura from '../../components/assets/batura2.jpg';
 import batura1 from '../../components/assets/batura3.jpg';
 import batura2 from '../../components/assets/batura1.JPG';
 import batura3 from '../../components/assets/passu1.jpg';
+import batura4 from '../../components/assets/bluesheep.jpg';
+import batura5 from '../../components/assets/snow_leopard.jpg';
+import batura6 from '../../components/assets/bird.jpg';
 
 const Discount = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +21,7 @@ const Discount = () => {
     {
       id: 1,
       _id: '1',
-      ibexphotos: [{ cloudinary_url: batura }],
+      ibexphotos: [{ cloudinary_url: batura5 }],
       description: 'Passu Ibex Hunt - Special Offer',
       newPrice: 1500,
       priceOld: 2000,
@@ -26,7 +29,7 @@ const Discount = () => {
     {
       id: 2,
       _id: '2',
-      ibexphotos: [{ cloudinary_url: batura1 }],
+      ibexphotos: [{ cloudinary_url: batura4 }],
       description: 'Batura Ibex Hunt - Limited Time',
       newPrice: 1700,
       priceOld: 2200,
@@ -43,6 +46,14 @@ const Discount = () => {
       id: 4,
       _id: '4',
       ibexphotos: [{ cloudinary_url: batura3 }],
+      description: 'Yunz Ibex Hunt - Early Bird Offer',
+      newPrice: 1600,
+      priceOld: 2100,
+    },
+    {
+      id: 5,
+      _id: '5',
+      ibexphotos: [{ cloudinary_url: batura6 }],
       description: 'Yunz Ibex Hunt - Early Bird Offer',
       newPrice: 1600,
       priceOld: 2100,

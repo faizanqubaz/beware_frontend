@@ -201,6 +201,11 @@ const apiKey = 'AIzaSyC6xvlbMFrLYt9ExmJvyFnd5pawC_Al4rs'; */
     .discount_main__arrow_right {
         font-size: 24px; /* Smaller arrows for mobile */
     }
+    .discount_main_container_slider_flex{
+        display: flex
+;
+    justify-content: space-between;
+    }
 }
 /* For larger screens (min-width: 1200px) */
 @media (min-width: 1200px) {

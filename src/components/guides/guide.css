@@ -13,39 +13,43 @@
   gap: 20px;
   overflow-x: auto;
   max-width: 1200px;
+  margin: 0 auto;
 }
-.lodge-card {
 
-  border-radius: 8px;
+.guide-card {
+  background: white;
+  border-radius: 10px;
   overflow: hidden;
-  max-width: 378px;
-  margin: 20px;
-
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.lodge-image img {
-  width: 22%;
-  height: 65px;
-  border-radius: 50%;
-}
-.lodge-image{
-  display: flex
-;
-    justify-content: space-between;
-    align-items: flex-start;
+.guide-image {
+  position: relative;
+  height: 200px; /* Fixed height for all media containers */
+  overflow: hidden;
 }
 
+.guide-media {
+  width: 100%;
+  height: 100%; /* Ensure media fills the container */
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  border-radius: 8px 8px 0 0; /* Optional: Rounded corners for the top */
+}
 
+.lodge-card {
+  padding: 15px;
+}
 
 .lodge-name {
   font-size: 19px;
-  margin: 0 0 1px;
+  margin: 0 0 10px;
 }
 
 .lodge-location {
   font-size: 1rem;
   color: #666;
-  margin: 0 0 0px;
+  margin: 0 0 10px;
 }
 
 .lodge-rating {
@@ -70,10 +74,6 @@
   color: #333;
   margin: 0 0 15px;
 }
-.guide-title_head{
-  max-width: 1200px;
-  margin: auto;
-}
 
 .view-outfitter-btn {
   background-color: #259d6f;
@@ -83,64 +83,14 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-  margin-bottom:10px
+  margin-bottom: 10px;
 }
 
 .view-outfitter-btn:hover {
   background-color: #1e7d5a;
 }
 
-.guide-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.guide-image {
-  position: relative;
-}
-
-.guide-image img {
-  width: 100%;
-  display: block;
-  height: 249px;
-}
-
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-}
-
-
-
-.guide-info h3 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.location {
-  font-size: 14px;
-  color: gray;
-}
-
-.rating {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.outfitter-button {
-  margin-top: 10px;
-  padding: 10px;
-  border: 1px solid #c4a000;
-  background: none
+.guide-title_head {
+  max-width: 1200px;
+  margin: auto;
 }
