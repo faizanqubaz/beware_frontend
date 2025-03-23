@@ -15,7 +15,7 @@ const VideoGallery = () => {
     { src: video1, title: 'Batura Video 1' },
     { src: video2, title: 'Batura Video 2' },
     { src: video3, title: 'Passu Video 1' },
-    { src: video4, title: 'Batura Video 1' }, 
+    { src: video4, title: 'Batura Video 1' },
     { src: video5, title: 'Batura Video 2' },
     { src: video6, title: 'Passu Video 2' },
     { src: video3, title: 'Passu Video 2' }
@@ -33,7 +33,8 @@ const VideoGallery = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0); // Track the visible range of videos
 
-  const videosToShow = 5; // Number of videos to show at a time
+  const isMobile = window.innerWidth <= 768; // Check if the screen is mobile
+  const videosToShow = isMobile ? 1 : 4; // Show 1 video on mobile, 4 on laptop
 
   const openLightbox = (index) => {
     setVideoIndex(index);
@@ -60,8 +61,6 @@ const VideoGallery = () => {
       </div>
 
       <div className="video-container">
-        
-
         <div className="video-slider">
           {startIndex > 0 && (
             <button className="arrow left-arrow" onClick={slideLeft}>
