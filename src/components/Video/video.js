@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './video.css';
-import video1 from '../assets/batura.mp4';
-import video2 from '../assets/batura.mp4';
-import video3 from '../assets/batura2.jpg';
+import video1 from '../assets/batura2.jpg';
+import video2 from '../assets/passuv1.mp4';
+import video3 from '../assets/video12.mp4';
+import video4 from '../assets/video9.mp4';
+import video5 from '../assets/hunt.mp4';
+import video6 from '../assets/hunt1.mp4';
 import FooterComponent from '../Footer/footer';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -12,9 +15,9 @@ const VideoGallery = () => {
     { src: video1, title: 'Batura Video 1' },
     { src: video2, title: 'Batura Video 2' },
     { src: video3, title: 'Passu Video 1' },
-    { src: video1, title: 'Batura Video 1' }, 
-    { src: video2, title: 'Batura Video 2' },
-    { src: video3, title: 'Passu Video 2' },
+    { src: video4, title: 'Batura Video 1' }, 
+    { src: video5, title: 'Batura Video 2' },
+    { src: video6, title: 'Passu Video 2' },
     { src: video3, title: 'Passu Video 2' }
   ];
 

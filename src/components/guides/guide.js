@@ -5,6 +5,7 @@ import video2 from '../assets/passuv1.mp4';
 import video3 from '../assets/video12.mp4';
 import video4 from '../assets/video9.mp4';
 import video5 from '../assets/hunt.mp4';
+import video6 from '../assets/hunt1.mp4';
 import { useMediaQuery } from "react-responsive";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,7 +58,7 @@ const guides = [
     reviews: 4,
     description:
       "With over 40 years of guiding experience in Southeast Alaska and Glacier Bay National Park, we are an exceptional choice for your next hunting adventure.",
-    image: video2,
+    image: video6,
   },
 ];
 
